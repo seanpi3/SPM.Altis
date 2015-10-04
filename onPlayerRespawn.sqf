@@ -1,0 +1,1 @@
+[] execVM "initPlayer.sqf";

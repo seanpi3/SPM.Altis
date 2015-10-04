@@ -1,0 +1,2 @@
+blueforMission = "";
+publicVariable "blueforMission";

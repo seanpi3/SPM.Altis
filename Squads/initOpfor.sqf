@@ -1,0 +1,2 @@
+opforMission= "";
+publicVariable "opforMission";

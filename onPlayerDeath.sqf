@@ -1,0 +1,1 @@
+removeAllActions player;
