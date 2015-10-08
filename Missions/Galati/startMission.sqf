@@ -2,6 +2,12 @@ if(!isDedicated) exitWith {};
 
 //Waiting for squads
 while{galatiSquadCount < 2} do {
+	if(isNull galatiNorth && isNull galatiSouth) exitWith {
+		fedMissionFilling = false;
+		fedSquadCount = 0;
+		publicVariable "fedMissionFilling";
+		publicVariable "fedSquadCount";
+	};
 	if(!isNull galatiNorth) then {
 		["Waiting for a second squad to start the match","hint",galatiNorth,false] call BIS_fnc_MP;
 	};

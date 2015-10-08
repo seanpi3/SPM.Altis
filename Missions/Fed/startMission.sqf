@@ -2,13 +2,19 @@ if(!isDedicated) exitWith {};
 
 //Waiting for squads
 while{fedSquadCount < 2} do {
+	if(isNull fedEast && isNull fedWest) exitWith {
+		fedMissionFilling = false;
+		fedSquadCount = 0;
+		publicVariable "fedMissionFilling";
+		publicVariable "fedSquadCount";
+	};
 	if(!isNull fedEast) then {
 		["Waiting for a second squad to start the match","hint",fedEast,false] call BIS_fnc_MP;
 	};
 	if(!isNull fedWest) then {
 		["Waiting for a second squad to start the match","hint",fedWest,false] call BIS_fnc_MP;
 	};
-	sleep 5;
+	sleep 2;
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", fedEast] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", fedWest] call BIS_fnc_MP;

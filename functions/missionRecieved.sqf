@@ -5,6 +5,7 @@ systemChat _mission;
 if(isDedicated) exitWith {};
 if (group player != _squad) exitWith {};
 
+	
 fnc_deploy = {
 	playerReady = player addAction ["Ready",{ready=true; player removeAction playerReady;}];
 	if(leader player == player) then {

@@ -2,6 +2,12 @@ if(!isDedicated) exitWith {};
 
 //Waiting for squads
 while{islandSquadCount < 2} do {
+	if(isNull islandNorth && isNull islandSouth) exitWith {
+		fedMissionFilling = false;
+		fedSquadCount = 0;
+		publicVariable "fedMissionFilling";
+		publicVariable "fedSquadCount";
+	};
 	if(!isNull islandNorth) then {
 		["Waiting for a second squad to start the match","hint",islandNorth,false] call BIS_fnc_MP;
 	};

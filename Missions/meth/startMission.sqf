@@ -2,6 +2,12 @@ if(!isDedicated) exitWith {};
 
 //Waiting for squads
 while{methSquadCount < 2} do {
+	if(isNull methOffence && isNull methDefence) exitWith {
+		fedMissionFilling = false;
+		fedSquadCount = 0;
+		publicVariable "fedMissionFilling";
+		publicVariable "fedSquadCount";
+	};
 	if(!isNull methOffence) then {
 		["Waiting for a second squad to start the match","hint",methOffence,false] call BIS_fnc_MP;
 	};

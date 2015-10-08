@@ -2,6 +2,12 @@ if(!isDedicated) exitWith {};
 
 //Waiting for squads
 while{koreSquadCount < 2} do {
+	if(isNull koreNorth && isNull koreSouth) exitWith {
+		fedMissionFilling = false;
+		fedSquadCount = 0;
+		publicVariable "fedMissionFilling";
+		publicVariable "fedSquadCount";
+	};
 	if(!isNull koreNorth) then {
 		["Waiting for a second squad to start the match","hint",koreNorth,false] call BIS_fnc_MP;
 	};

@@ -2,6 +2,12 @@ if(!isDedicated) exitWith {};
 
 //Waiting for squads
 while{castleSquadCount < 2} do {
+	if(isNull castleOffence && isNull castleDefence) exitWith {
+		fedMissionFilling = false;
+		fedSquadCount = 0;
+		publicVariable "fedMissionFilling";
+		publicVariable "fedSquadCount";
+	};
 	if(!isNull castleOffence) then {
 		["Waiting for a second squad to start the match","hint",castleOffence,false] call BIS_fnc_MP;
 	};
