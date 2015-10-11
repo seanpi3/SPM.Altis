@@ -94,7 +94,6 @@ while{!_squad1Ready || !_squad2Ready} do {
 		["Your team is ready","hint",koreSouth, false] call BIS_fnc_MP;
 	};
 	sleep 2;
-    [format["Waiting for squads to be ready: %1",playersReady],"hint",true,false] call bis_fnc_MP;
 };
 playersReady = [];
 [["reset"],"fnc_queryClient",koreNorth,false] call bis_fnc_MP;
