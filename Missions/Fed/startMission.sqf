@@ -34,6 +34,26 @@ _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
 	[["ready"],"fnc_queryClient",fedEast, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",fedWest, false] call bis_fnc_MP;	
+	_count = 0;
+	_squad = units fedEast;
+	while{_count < count _squad} do {
+		_player = _squad select _count;
+		_squad1Ready = true;
+		if(! _player in playersReady) then {
+			_squad1Ready = false;
+		};
+		_count = _count +1;
+	};
+	_count = 0;
+	_squad = units fedWest;
+	while{_count < count _squad} do{
+		_player = _squad select _count;
+		_squad2Ready = true;
+		if(! _player in playersReady) then {
+			_squad2Ready = false;
+		};
+		_count = _count +1;
+	};
 	if(fedEast in playersReady) then {
 		_squad1Ready = true;
 		["Your team is ready","hint",fedEast, false] call BIS_fnc_MP;
@@ -42,7 +62,7 @@ while{!_squad1Ready || !_squad2Ready} do {
 		_squad2Ready = true;
 		["Your team is ready","hint",fedWest, false] call BIS_fnc_MP;
 	};
-	sleep 1;
+	sleep 5;
 };
 playersReady = [];
 [["reset"],"fnc_queryClient",fedEast,false] call bis_fnc_MP;
