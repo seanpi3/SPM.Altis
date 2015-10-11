@@ -18,8 +18,8 @@ while{castleSquadCount < 2} do {
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", castleOffence] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", castleDefence] call BIS_fnc_MP;
-["deploy","fnc_queryClient",castleOffence,false] call BIS_fnc_MP;
-["deploy","fnc_queryClient",castleDefence,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",castleOffence,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",castleDefence,false] call BIS_fnc_MP;
 castleMissionFilling = false;
 publicVariable "castleMissionFilling";
 //max squads, start the mission

@@ -18,8 +18,8 @@ while{koreSquadCount < 2} do {
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", koreNorth] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", koreSouth] call BIS_fnc_MP;
-["deploy","fnc_queryClient",koreNorth,false] call BIS_fnc_MP;
-["deploy","fnc_queryClient",koreSouth,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",koreNorth,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",koreSouth,false] call BIS_fnc_MP;
 koreMissionFilling = false;
 publicVariable "koreMissionFilling";
 //max squads, start the mission

@@ -18,8 +18,8 @@ while{galatiSquadCount < 2} do {
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", galatiNorth] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", galatiSouth] call BIS_fnc_MP;
-["deploy","fnc_queryClient",galatiNorth,false] call BIS_fnc_MP;
-["deploy","fnc_queryClient",galatiSouth,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",galatiNorth,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",galatiSouth,false] call BIS_fnc_MP;
 galatiMissionFilling = false;
 publicVariable "galatiMissionFilling";
 //max squads, start the mission

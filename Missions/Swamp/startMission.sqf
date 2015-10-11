@@ -18,8 +18,8 @@ while{swampSquadCount < 2} do {
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", swampTeam1] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", swampTeam2] call BIS_fnc_MP;
-["deploy","fnc_queryClient",swampTeam1,false] call BIS_fnc_MP;
-["deploy","fnc_queryClient",swampTeam2,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",swampTeam1,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",swampTeam2,false] call BIS_fnc_MP;
 swampMissionFilling = false;
 publicVariable "swampMissionFilling";
 //max squads, start the mission

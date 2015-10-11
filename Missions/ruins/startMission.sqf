@@ -18,8 +18,8 @@ while{ruinsSquadCount < 2} do {
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", ruinsNorth] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", ruinsSouth] call BIS_fnc_MP;
-["deploy","fnc_queryClient",ruinsNorth,false] call BIS_fnc_MP;
-["deploy","fnc_queryClient",ruinsSouth,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",ruinsNorth,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",ruinsSouth,false] call BIS_fnc_MP;
 ruinsMissionFilling = false;
 publicVariable "ruinsMissionFilling";
 //max squads, start the mission

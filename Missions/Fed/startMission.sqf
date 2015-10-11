@@ -18,8 +18,8 @@ while{fedSquadCount < 2} do {
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", fedEast] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", fedWest] call BIS_fnc_MP;
-["deploy","fnc_queryClient",fedEast,false] call BIS_fnc_MP;
-["deploy","fnc_queryClient",fedWest,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",fedEast,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",fedWest,false] call BIS_fnc_MP;
 fedMissionFilling = false;
 publicVariable "fedMissionFilling";
 //max squads, start the mission

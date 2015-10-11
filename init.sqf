@@ -10,3 +10,4 @@ else{
 	call compile preprocessFileLineNumbers "ShoterAnimation\init.sqf";
 	[] execVM "functions.sqf";
 };
+

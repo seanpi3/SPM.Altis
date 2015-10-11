@@ -18,8 +18,8 @@ while{methSquadCount < 2} do {
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", methOffence] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", methDefence] call BIS_fnc_MP;
-["deploy","fnc_queryClient",methOffence,false] call BIS_fnc_MP;
-["deploy","fnc_queryClient",methDefence,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",methOffence,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",methDefence,false] call BIS_fnc_MP;
 methMissionFilling = false;
 publicVariable "methMissionFilling";
 //max squads, start the mission

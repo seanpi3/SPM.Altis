@@ -18,8 +18,8 @@ while{islandSquadCount < 2} do {
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", islandNorth] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", islandSouth] call BIS_fnc_MP;
-["deploy","fnc_queryClient",islandNorth,false] call BIS_fnc_MP;
-["deploy","fnc_queryClient",islandSouth,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",islandNorth,false] call BIS_fnc_MP;
+[["deploy"],"fnc_queryClient",islandSouth,false] call BIS_fnc_MP;
 islandMissionFilling = false;
 publicVariable "islandMissionFilling";
 //max squads, start the mission
