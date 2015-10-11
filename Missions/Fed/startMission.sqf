@@ -16,6 +16,8 @@ while{fedSquadCount < 2} do {
 	};
 	sleep 2;
 };
+
+waitUntil{playersReady == []};
 ["Second squad found. You may now deploy to the battlefield.","hint", fedEast] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", fedWest] call BIS_fnc_MP;
 ["deploy","fnc_queryClient",fedEast,false] call BIS_fnc_MP;
@@ -28,10 +30,41 @@ fedMissionInProgress = true;
 publicVariable "fedMissionInProgress";
 
 //waiting for squads to be ready
-playersReady = [];
+
 _squad1Ready = false;
 _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
+	if(isNull fedEast && isNull fedWest) exitWith {
+		opforMission = "";
+		blueforMission = "";
+		fedEast = grpNull;
+		fedWest = grpNull;
+		fedSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+	}; 
+	if(isNull fedEast) exitWith {
+		[[grpNull, fedWest],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		fedEast = grpNull;
+		fedWest = grpNull;
+		fedSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
+	if(isNull fedWest) exitWith {
+		[[grpNull, fedEast],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		fedEast = grpNull;
+		fedWest = grpNull;
+		fedSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
 	[["ready"],"fnc_queryClient",fedEast, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",fedWest, false] call bis_fnc_MP;	
 	_count = 0;

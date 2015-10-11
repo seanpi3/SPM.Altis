@@ -13,11 +13,11 @@ fedFlagAction = fedFlag addAction ["Claim Victory",
 				if (!alive player) exitWith {};
 				if(player distance _target > 7) exitWith {};
 				if(_count >= 1) then {_success = true};
-		};
-	fedFlag setFlagTexture "Resources\TempestFlag.jpg";
+		};	
 	fedFlag setFlagOwner objNull;
-	fediMissionInProgress = false;
-	publicVariableServer "fedMissionInProgress";
+	[[fedFlag, "Resources\TempestFlag.jpg"],"setFlagTexture",true,true] call bis_fnc_MP;
+	fedMissionInProgress = false;
+	publicVariable "fedMissionInProgress";
 	[["MissionCompleted",format["%1 has claimed victory for %2!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
 	fedFlag removeAction fedFlagAction;
 	[[fedFlag, fedFlagAction],"removeAction",fedEast,false] call bis_fnc_MP;
