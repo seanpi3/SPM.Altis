@@ -32,6 +32,7 @@ playersReady = [];
 _squad1Ready = false;
 _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
+	[format["Waiting for squads to be ready: %1",playersReady],"hint",true,false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",fedEast, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",fedWest, false] call bis_fnc_MP;	
 	_count = 0;
