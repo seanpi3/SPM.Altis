@@ -40,20 +40,20 @@ while{!_squad1Ready || !_squad2Ready} do {
 	while{_count < count _squad} do {
 		_player = _squad select _count;
 		_squad1Ready = true;
-		if(! _player in playersReady) then {
+		if(!(_player in playersReady)) then {
 			_squad1Ready = false;
 		};
-		_count = _count +1;
+		_count = _count + 1;
 	};
 	_count = 0;
 	_squad = units fedWest;
 	while{_count < count _squad} do{
 		_player = _squad select _count;
 		_squad2Ready = true;
-		if(! _player in playersReady) then {
+		if(!(_player in playersReady)) then {
 			_squad2Ready = false;
 		};
-		_count = _count +1;
+		_count = _count + 1;
 	};
 	if(fedEast in playersReady) then {
 		_squad1Ready = true;
