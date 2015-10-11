@@ -18,7 +18,7 @@ methFlagAction = methFlag addAction ["Claim Victory",
 	methFlag setFlagTexture "Resources\TempestFlag.jpg";
 	methFlag setFlagOwner objNull;
 	methiMissionInProgress = false;
-	publicVariable "methiMissionInProgress";
+	publicVariable "methMissionInProgress";
 	[["MissionCompleted",format["%1 has claimed victory for %2 at the meth!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
 	methFlag removeAction methFlagAction;
 	},nil,-1,false,false,"","_this distance _target <= 5"

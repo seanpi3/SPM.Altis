@@ -18,7 +18,7 @@ islandFlagAction = islandFlag addAction ["Claim Victory",
 	islandFlag setFlagTexture "Resources\TempestFlag.jpg";
 	islandFlag setFlagOwner objNull;
 	islandiMissionInProgress = false;
-	publicVariable "islandiMissionInProgress";
+	publicVariable "islandMissionInProgress";
 	[["MissionCompleted",format["%1 has claimed victory for %2!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
 	islandFlag removeAction islandFlagAction;
 	[[islandFlag, islandFlagAction],"removeAction",islandNorth,false] call bis_fnc_MP;

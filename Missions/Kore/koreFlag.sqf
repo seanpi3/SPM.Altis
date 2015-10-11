@@ -18,7 +18,7 @@ koreFlagAction = koreFlag addAction ["Claim Victory",
 	koreFlag setFlagTexture "Resources\TempestFlag.jpg";
 	koreFlag setFlagOwner objNull;
 	koreiMissionInProgress = false;
-	publicVariable "koreiMissionInProgress";
+	publicVariable "koreMissionInProgress";
 	[["MissionCompleted",format["%1 has claimed victory for %2!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
 	koreFlag removeAction koreFlagAction;
 	[[koreFlag, koreFlagAction],"removeAction",koreNorth,false] call bis_fnc_MP;

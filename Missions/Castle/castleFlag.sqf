@@ -18,7 +18,7 @@ castleFlagAction = castleFlag addAction ["Claim Victory",
 	castleFlag setFlagTexture "Resources\TempestFlag.jpg";
 	castleFlag setFlagOwner objNull;
 	castleiMissionInProgress = false;
-	publicVariable "castleiMissionInProgress";
+	publicVariable "castleMissionInProgress";
 	[["MissionCompleted",format["%1 has claimed victory for %2 at the castle!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
 	castleFlag removeAction castleFlagAction;
 	},nil,-1,false,false,"","_this distance _target <= 5"

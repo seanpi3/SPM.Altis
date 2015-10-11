@@ -18,7 +18,7 @@ galatiFlagAction = galatiFlag addAction ["Claim Victory",
 	galatiFlag setFlagTexture "Resources\TempestFlag.jpg";
 	galatiFlag setFlagOwner objNull;
 	galatiiMissionInProgress = false;
-	publicVariable "galatiiMissionInProgress";
+	publicVariable "galatiMissionInProgress";
 	[["MissionCompleted",format["%1 has claimed victory for %2!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
 	galatiFlag removeAction galatiFlagAction;
 	[[galatiFlag, galatiFlagAction],"removeAction",galatiNorth,false] call bis_fnc_MP;

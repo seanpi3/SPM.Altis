@@ -18,7 +18,7 @@ swampFlagAction = swampFlag addAction ["Claim Victory",
 	swampFlag setFlagTexture "Resources\TempestFlag.jpg";
 	swampFlag setFlagOwner objNull;
 	swampiMissionInProgress = false;
-	publicVariable "swampiMissionInProgress";
+	publicVariable "swampMissionInProgress";
 	[["MissionCompleted",format["%1 has claimed victory for %2!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
 	swampFlag removeAction swampFlagAction;
 	[[swampFlag, swampFlagAction],"removeAction",swampTeam1,false] call bis_fnc_MP;

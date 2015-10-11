@@ -18,7 +18,7 @@ ruinsFlagAction = ruinsFlag addAction ["Claim Victory",
 	ruinsFlag setFlagTexture "Resources\TempestFlag.jpg";
 	ruinsFlag setFlagOwner objNull;
 	ruinsiMissionInProgress = false;
-	publicVariable "ruinsiMissionInProgress";
+	publicVariable "ruinsMissionInProgress";
 	[["MissionCompleted",format["%1 has claimed victory for %2!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
 	ruinsFlag removeAction ruinsFlagAction;
 	[[ruinsFlag, ruinsFlagAction],"removeAction",ruinsNorth,false] call bis_fnc_MP;
