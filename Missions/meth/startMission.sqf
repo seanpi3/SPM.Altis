@@ -28,10 +28,41 @@ methMissionInProgress = true;
 publicVariable "methMissionInProgress";
 
 //waiting for squads to be ready
-playersReady = [];
+
 _squad1Ready = false;
 _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
+	if(isNull methOffence && isNull methDefence) exitWith {
+		opforMission = "";
+		blueforMission = "";
+		methOffence = grpNull;
+		methDefence = grpNull;
+		methSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+	}; 
+	if(isNull methOffence) exitWith {
+		[[grpNull, methDefence],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		methOffence = grpNull;
+		methDefence = grpNull;
+		methSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
+	if(isNull methDefence) exitWith {
+		[[grpNull, methOffence],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		methOffence = grpNull;
+		methDefence = grpNull;
+		methSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
 	[["ready"],"fnc_queryClient",methOffence, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",methDefence, false] call bis_fnc_MP;	
 	_count = 0;

@@ -28,10 +28,41 @@ castleMissionInProgress = true;
 publicVariable "castleMissionInProgress";
 
 //waiting for squads to be ready
-playersReady = [];
+
 _squad1Ready = false;
 _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
+	if(isNull castleOffence && isNull castleDefence) exitWith {
+		opforMission = "";
+		blueforMission = "";
+		castleOffence = grpNull;
+		castleDefence = grpNull;
+		castleSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+	}; 
+	if(isNull castleOffence) exitWith {
+		[[grpNull, castleDefence],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		castleOffence = grpNull;
+		castleDefence = grpNull;
+		castleSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
+	if(isNull castleDefence) exitWith {
+		[[grpNull, castleOffence],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		castleOffence = grpNull;
+		castleDefence = grpNull;
+		castleSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
 	[["ready"],"fnc_queryClient",castleOffence, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",castleDefence, false] call bis_fnc_MP;	
 	_count = 0;

@@ -1,4 +1,4 @@
-
+playersReady = [];
 
 //castle mission
 castleMissionFilling = false;

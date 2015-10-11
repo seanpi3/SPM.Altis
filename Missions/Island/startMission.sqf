@@ -28,10 +28,41 @@ islandMissionInProgress = true;
 publicVariable "islandMissionInProgress";
 
 //waiting for squads to be ready
-playersReady = [];
+
 _squad1Ready = false;
 _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
+	if(isNull islandNorth && isNull islandSouth) exitWith {
+		opforMission = "";
+		blueforMission = "";
+		islandNorth = grpNull;
+		islandSouth = grpNull;
+		islandSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+	}; 
+	if(isNull islandNorth) exitWith {
+		[[grpNull, islandSouth],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		islandNorth = grpNull;
+		islandSouth = grpNull;
+		islandSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
+	if(isNull islandSouth) exitWith {
+		[[grpNull, islandNorth],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		islandNorth = grpNull;
+		islandSouth = grpNull;
+		islandSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
 	[["ready"],"fnc_queryClient",islandNorth, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",islandSouth, false] call bis_fnc_MP;	
 	_count = 0;

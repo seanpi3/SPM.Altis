@@ -16,8 +16,6 @@ while{fedSquadCount < 2} do {
 	};
 	sleep 2;
 };
-
-waitUntil{playersReady == []};
 ["Second squad found. You may now deploy to the battlefield.","hint", fedEast] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", fedWest] call BIS_fnc_MP;
 ["deploy","fnc_queryClient",fedEast,false] call BIS_fnc_MP;

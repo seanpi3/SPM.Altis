@@ -28,10 +28,41 @@ koreMissionInProgress = true;
 publicVariable "koreMissionInProgress";
 
 //waiting for squads to be ready
-playersReady = [];
+
 _squad1Ready = false;
 _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
+	if(isNull koreNorth && isNull koreSouth) exitWith {
+		opforMission = "";
+		blueforMission = "";
+		koreNorth = grpNull;
+		koreSouth = grpNull;
+		koreSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+	}; 
+	if(isNull koreNorth) exitWith {
+		[[grpNull, koreSouth],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		koreNorth = grpNull;
+		koreSouth = grpNull;
+		koreSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
+	if(isNull koreSouth) exitWith {
+		[[grpNull, koreNorth],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		koreNorth = grpNull;
+		koreSouth = grpNull;
+		koreSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
 	[["ready"],"fnc_queryClient",koreNorth, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",koreSouth, false] call bis_fnc_MP;	
 	_count = 0;

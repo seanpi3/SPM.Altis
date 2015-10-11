@@ -28,10 +28,41 @@ swampMissionInProgress = true;
 publicVariable "swampMissionInProgress";
 
 //waiting for squads to be ready
-playersReady = [];
+
 _squad1Ready = false;
 _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
+	if(isNull swampTeam1 && isNull swampTeam2) exitWith {
+		opforMission = "";
+		blueforMission = "";
+		swampTeam1 = grpNull;
+		swampTeam2 = grpNull;
+		swampSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+	}; 
+	if(isNull swampTeam1) exitWith {
+		[[grpNull, swampTeam2],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		swampTeam1 = grpNull;
+		swampTeam2 = grpNull;
+		swampSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
+	if(isNull swampTeam2) exitWith {
+		[[grpNull, swampTeam1],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		swampTeam1 = grpNull;
+		swampTeam2 = grpNull;
+		swampSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
 	[["ready"],"fnc_queryClient",swampTeam1, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",swampTeam2, false] call bis_fnc_MP;	
 	_count = 0;

@@ -28,10 +28,41 @@ ruinsMissionInProgress = true;
 publicVariable "ruinsMissionInProgress";
 
 //waiting for squads to be ready
-playersReady = [];
+
 _squad1Ready = false;
 _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
+	if(isNull ruinsNorth && isNull ruinsSouth) exitWith {
+		opforMission = "";
+		blueforMission = "";
+		ruinsNorth = grpNull;
+		ruinsSouth = grpNull;
+		ruinsSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+	}; 
+	if(isNull ruinsNorth) exitWith {
+		[[grpNull, ruinsSouth],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		ruinsNorth = grpNull;
+		ruinsSouth = grpNull;
+		ruinsSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
+	if(isNull ruinsSouth) exitWith {
+		[[grpNull, ruinsNorth],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		ruinsNorth = grpNull;
+		ruinsSouth = grpNull;
+		ruinsSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
 	[["ready"],"fnc_queryClient",ruinsNorth, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",ruinsSouth, false] call bis_fnc_MP;	
 	_count = 0;

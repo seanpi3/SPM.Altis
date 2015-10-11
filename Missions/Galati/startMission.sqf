@@ -28,10 +28,41 @@ galatiMissionInProgress = true;
 publicVariable "galatiMissionInProgress";
 
 //waiting for squads to be ready
-playersReady = [];
+
 _squad1Ready = false;
 _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
+	if(isNull galatiNorth && isNull galatiSouth) exitWith {
+		opforMission = "";
+		blueforMission = "";
+		galatiNorth = grpNull;
+		galatiSouth = grpNull;
+		galatiSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+	}; 
+	if(isNull galatiNorth) exitWith {
+		[[grpNull, galatiSouth],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		galatiNorth = grpNull;
+		galatiSouth = grpNull;
+		galatiSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
+	if(isNull galatiSouth) exitWith {
+		[[grpNull, galatiNorth],"fnc_returnToBase"] call BIS_fnc_MP;
+		opforMission = "";
+		blueforMission = "";
+		galatiNorth = grpNull;
+		galatiSouth = grpNull;
+		galatiSquadCount = 0;
+		publicVariable "opforMission";
+		publicVariable "blueforMission";
+		
+	};
 	[["ready"],"fnc_queryClient",galatiNorth, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",galatiSouth, false] call bis_fnc_MP;	
 	_count = 0;
