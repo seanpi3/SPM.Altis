@@ -21,7 +21,5 @@ fedFlagAction = fedFlag addAction ["Claim Victory",
 	publicVariable "fediMissionInProgress";
 	[["MissionCompleted",format["%1 has claimed victory for %2 at the fed!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
 	fedFlag removeAction fedFlagAction;
-	[[fedFlag, fedFlagAction],"removeAction", fedEast, false] call BIS_fnc_MP;
-	[[fedFlag, fedFlagAction],"removeAction", fedWest, false] call BIS_fnc_MP;
 	},nil,-1,false,false,"","_this distance _target <= 5"
 ];
