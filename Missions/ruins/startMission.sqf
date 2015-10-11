@@ -3,10 +3,10 @@ if(!isDedicated) exitWith {};
 //Waiting for squads
 while{ruinsSquadCount < 2} do {
 	if(isNull ruinsNorth && isNull ruinsSouth) exitWith {
-		fedMissionFilling = false;
-		fedSquadCount = 0;
-		publicVariable "fedMissionFilling";
-		publicVariable "fedSquadCount";
+		ruinsMissionFilling = false;
+		ruinsSquadCount = 0;
+		publicVariable "ruinsMissionFilling";
+		publicVariable "ruinsSquadCount";
 	};
 	if(!isNull ruinsNorth) then {
 		["Waiting for a second squad to start the match","hint",ruinsNorth,false] call BIS_fnc_MP;
@@ -14,7 +14,7 @@ while{ruinsSquadCount < 2} do {
 	if(!isNull ruinsSouth) then {
 		["Waiting for a second squad to start the match","hint",ruinsSouth,false] call BIS_fnc_MP;
 	};
-	sleep 5;
+	sleep 2;
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", ruinsNorth] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", ruinsSouth] call BIS_fnc_MP;
@@ -34,6 +34,26 @@ _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
 	[["ready"],"fnc_queryClient",ruinsNorth, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",ruinsSouth, false] call bis_fnc_MP;	
+	_count = 0;
+	_squad = units ruinsNorth;
+	while{_count < count _squad} do {
+		_player = _squad select _count;
+		_squad1Ready = true;
+		if(!(_player in playersReady)) then {
+			_squad1Ready = false;
+		};
+		_count = _count + 1;
+	};
+	_count = 0;
+	_squad = units ruinsSouth;
+	while{_count < count _squad} do{
+		_player = _squad select _count;
+		_squad2Ready = true;
+		if(!(_player in playersReady)) then {
+			_squad2Ready = false;
+		};
+		_count = _count + 1;
+	};
 	if(ruinsNorth in playersReady) then {
 		_squad1Ready = true;
 		["Your team is ready","hint",ruinsNorth, false] call BIS_fnc_MP;
@@ -42,7 +62,8 @@ while{!_squad1Ready || !_squad2Ready} do {
 		_squad2Ready = true;
 		["Your team is ready","hint",ruinsSouth, false] call BIS_fnc_MP;
 	};
-	sleep 1;
+	sleep 2;
+    [format["Waiting for squads to be ready: %1",playersReady],"hint",true,false] call bis_fnc_MP;
 };
 playersReady = [];
 [["reset"],"fnc_queryClient",ruinsNorth,false] call bis_fnc_MP;

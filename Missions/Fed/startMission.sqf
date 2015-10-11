@@ -62,7 +62,7 @@ while{!_squad1Ready || !_squad2Ready} do {
 		_squad2Ready = true;
 		["Your team is ready","hint",fedWest, false] call BIS_fnc_MP;
 	};
-	sleep 5;
+	sleep 2;
     [format["Waiting for squads to be ready: %1",playersReady],"hint",true,false] call bis_fnc_MP;
 };
 playersReady = [];

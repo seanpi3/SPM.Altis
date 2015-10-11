@@ -3,10 +3,10 @@ if(!isDedicated) exitWith {};
 //Waiting for squads
 while{castleSquadCount < 2} do {
 	if(isNull castleOffence && isNull castleDefence) exitWith {
-		fedMissionFilling = false;
-		fedSquadCount = 0;
-		publicVariable "fedMissionFilling";
-		publicVariable "fedSquadCount";
+		castleMissionFilling = false;
+		castleSquadCount = 0;
+		publicVariable "castleMissionFilling";
+		publicVariable "castleSquadCount";
 	};
 	if(!isNull castleOffence) then {
 		["Waiting for a second squad to start the match","hint",castleOffence,false] call BIS_fnc_MP;
@@ -14,7 +14,7 @@ while{castleSquadCount < 2} do {
 	if(!isNull castleDefence) then {
 		["Waiting for a second squad to start the match","hint",castleDefence,false] call BIS_fnc_MP;
 	};
-	sleep 5;
+	sleep 2;
 };
 ["Second squad found. You may now deploy to the battlefield.","hint", castleOffence] call BIS_fnc_MP;
 ["Second squad found. You may now deploy to the battlefield.","hint", castleDefence] call BIS_fnc_MP;
@@ -34,6 +34,26 @@ _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
 	[["ready"],"fnc_queryClient",castleOffence, false] call bis_fnc_MP;
 	[["ready"],"fnc_queryClient",castleDefence, false] call bis_fnc_MP;	
+	_count = 0;
+	_squad = units castleOffence;
+	while{_count < count _squad} do {
+		_player = _squad select _count;
+		_squad1Ready = true;
+		if(!(_player in playersReady)) then {
+			_squad1Ready = false;
+		};
+		_count = _count + 1;
+	};
+	_count = 0;
+	_squad = units castleDefence;
+	while{_count < count _squad} do{
+		_player = _squad select _count;
+		_squad2Ready = true;
+		if(!(_player in playersReady)) then {
+			_squad2Ready = false;
+		};
+		_count = _count + 1;
+	};
 	if(castleOffence in playersReady) then {
 		_squad1Ready = true;
 		["Your team is ready","hint",castleOffence, false] call BIS_fnc_MP;
@@ -42,7 +62,8 @@ while{!_squad1Ready || !_squad2Ready} do {
 		_squad2Ready = true;
 		["Your team is ready","hint",castleDefence, false] call BIS_fnc_MP;
 	};
-	sleep 1;
+	sleep 2;
+    [format["Waiting for squads to be ready: %1",playersReady],"hint",true,false] call bis_fnc_MP;
 };
 playersReady = [];
 [["reset"],"fnc_queryClient",castleOffence,false] call bis_fnc_MP;

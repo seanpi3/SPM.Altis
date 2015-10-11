@@ -9,17 +9,19 @@ islandFlagAction = islandFlag addAction ["Claim Victory",
 			{	
 				[[player, "AwopPknlMstpSoptWbinDnon_AmovPknlMstpSrasWlnrDnon_end"], "playMove", true, false, false] spawn BIS_fnc_MP;
 				sleep 2.5;
-				_count = _count + .1;
+				_count = _count + .2;
 				if (!alive player) exitWith {};
 				if(player distance _target > 7) exitWith {};
-				if(_count >= 1) exitWith{ _success = true; };
+				if(_count >= 1) then { _success = true; };
 				
 		};
 	islandFlag setFlagTexture "Resources\TempestFlag.jpg";
 	islandFlag setFlagOwner objNull;
 	islandiMissionInProgress = false;
 	publicVariable "islandiMissionInProgress";
-	[["MissionCompleted",format["%1 has claimed victory for %2 at the island!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
+	[["MissionCompleted",format["%1 has claimed victory for %2!",name player,squad]],"fnc_notify", true, false] call BIS_fnc_MP;
 	islandFlag removeAction islandFlagAction;
+	[[islandFlag, islandFlagAction],"removeAction",islandNorth,false] call bis_fnc_MP;
+	[[islandFlag, islandFlagAction],"removeAction",islandSouth,false] call bis_fnc_MP;
 	},nil,-1,false,false,"","_this distance _target <= 5"
 ];
