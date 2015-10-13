@@ -1,5 +1,5 @@
 author = "Ozadu";
-onLoadName = "Squad Mission Alpha v0.3";
+onLoadName = "Squad Mission Alpha";
 respawn = 3;
 respawndelay = 10;
 disabledAI = 1;
@@ -8,7 +8,9 @@ enableDebugConsole = 1;
 allowFunctionsLog = 1;
 
 #include "Resources\VAS\menu.hpp"
-
+#include "defines.hpp"
+#include "vs_screen.hpp"
+#include "helloworld.hpp"
 class CfgSounds
 {
  

@@ -11,6 +11,8 @@ fnc_paintball = compile preprocessFileLineNumbers "debug\paintball.sqf";
 fnc_animation = compile preprocessFileLineNumbers "ShoterAnimation\ShoterAnimation.sqf";
 fnc_endAnimation = compile preprocessFileLineNumbers "ShoterAnimation\endAnimation.sqf";
 fnc_notify = compile preprocessFileLineNumbers "functions\notifyPlayer.sqf";
+fnc_addKill = compile preprocessFileLineNumbers "functions\addKill.sqf";
+fnc_addDeath = compile preprocessFileLineNumbers "functions\addDeath.sqf";
 
 fnc_getIntel = compile preprocessFileLineNumbers "functions\getIntel.sqf";
 fnc_missionRecieved = compile preprocessFileLineNumbers "functions\missionRecieved.sqf";
