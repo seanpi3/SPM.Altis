@@ -1,8 +1,6 @@
 private ["_spawn","_display"];
 waitUntil {!isNull player};
 systemChat "Initializing player...";
-playerKills = 0;
-playerDeaths = 0;
 holstered = false;
 fronzen = false;
 ready = false;
@@ -10,19 +8,6 @@ squadReady = false;
 deploy = false;
 weapon = getText(configFile >> "cfgWeapons" >> (currentWeapon player) >> "displayName");
 squad = "none";
-profile = profileNamespace;
-if(isNull (profile getVariable "SPM_kills")) then {
-	profile setVariable ["SPM_kills",0];
-}
-else{
-	playerKills = profile getVariable "SPM_kills";
-};
-if(isNull (profile getVariable "SPM_deaths")) then {
-	profile setVariable ["SPM_deaths", 0 ];
-}
-else{
-	playerDeaths = profile getVariable "SPM_deaths";
-};
 [player] execVM "Scripts\loadout.sqf";
 
 switch (playerSide) do {
