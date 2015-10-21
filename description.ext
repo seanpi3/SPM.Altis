@@ -8,9 +8,6 @@ enableDebugConsole = 1;
 allowFunctionsLog = 1;
 
 #include "Resources\VAS\menu.hpp"
-#include "defines.hpp"
-#include "vs_screen.hpp"
-#include "helloworld.hpp"
 class CfgSounds
 {
  
