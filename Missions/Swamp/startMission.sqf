@@ -105,8 +105,8 @@ playersReady = [];
 [["Standard",["Mission Started!","All players ready. GO! GO! GO!"]],"BIS_fnc_showNotification",swampTeam1,false] call BIS_fnc_MP;
 [["Standard",["Mission Started!","All players ready. GO! GO! GO!"]],"BIS_fnc_showNotification",swampTeam2,false] call BIS_fnc_MP;
 
-[[],"fnc_swampFlag",swampTeam1, false] call bis_fnc_MP;
-[[],"fnc_swampFlag",swampTeam2, false] call bis_fnc_MP;
+[[],"fnc_swampFlags",swampTeam1, false] call bis_fnc_MP;
+[[],"fnc_swampFlags",swampTeam2, false] call bis_fnc_MP;
 //mission run
 while{swampMissionInProgress} do {
 	sleep 2;
