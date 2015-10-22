@@ -15,7 +15,6 @@ else
 {
 	player removeAction unholster;
 	player action ["hideWeapon",player,player,0];
-	holster = player addAction ["Holster Weapon", fnc_holsterWeapon, false,100,false,false,"","!holstered"];
 	_state = false;
 };
 holstered = _state;
