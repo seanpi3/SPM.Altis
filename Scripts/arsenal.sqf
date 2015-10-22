@@ -49,7 +49,6 @@ _arsenalObject = ["Open",false] spawn BIS_fnc_arsenal;
 				"optic_MRD",
 				"U_B_CombatUniform_mcam",
 				"U_O_GhillieSuit",
-				"U_O_PilotCoveralls",
 				"U_O_Wetsuit",
 				"U_B_CombatUniform_mcam_vest",
 				"U_B_CombatUniform_mcam_tshirt",
