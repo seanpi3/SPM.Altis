@@ -2072,8 +2072,8 @@ class Mission
 			age="UNKNOWN";
 			name="opforBase";
 			expCond="(player distance opforBase) < 100";
-			expActiv="inBase = true;";
-			expDesactiv="inBase = false;";
+			expActiv="inBase = true; player allowDamage false;";
+			expDesactiv="inBase = false; player allowDamage true;";
 			class Effects
 			{
 			};
@@ -2086,8 +2086,8 @@ class Mission
 			age="UNKNOWN";
 			name="blueforBase";
 			expCond="(player distance blueforBase) < 100";
-			expActiv="inBase = true;";
-			expDesactiv="inBase = false;";
+			expActiv="inBase = true; player allowDamage false;";
+			expDesactiv="inBase = false; player allowDamage true;";
 			class Effects
 			{
 			};
