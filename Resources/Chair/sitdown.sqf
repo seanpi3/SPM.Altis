@@ -26,7 +26,7 @@ standup = _unit addAction ["<t color='#0099FF'>Stand Up</t>",{
 					sitting = false;
 					}
 ];
-
-_unit setpos [getpos _chair select 0, getpos _chair select 1,((getpos _chair select 2) +1)];
+_unit setPos (getPos _chair);
+//_unit setpos [getpos _chair select 0, getpos _chair select 1,((getpos _chair select 2) +1)];
 
 

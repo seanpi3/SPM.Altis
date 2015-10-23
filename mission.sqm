@@ -1594,16 +1594,18 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="opforMap";
+			init="this enableSimulation false;";
 		};
 		class Item3
 		{
 			position[]={12844.772,91.030205,16682.875};
-			azimut=73.084793;
+			azimut=73.084801;
 			id=52;
 			side="EMPTY";
 			vehicle="MapBoard_seismic_F";
 			leader=1;
 			skill=0.60000002;
+			init="this enableSimulation false;";
 		};
 		class Item4
 		{
@@ -1615,16 +1617,18 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="blueforMap";
+			init="this enableSimulation false";
 		};
 		class Item5
 		{
 			position[]={20079.756,101.06576,6727.5107};
-			azimut=-24.336969;
+			azimut=-24.337;
 			id=54;
 			side="EMPTY";
 			vehicle="MapBoard_seismic_F";
 			leader=1;
 			skill=0.60000002;
+			init="this enableSimulation false";
 		};
 		class Item6
 		{
@@ -1733,6 +1737,7 @@ class Mission
 			vehicle="Land_OfficeChair_01_F";
 			leader=1;
 			skill=0.60000002;
+			init="this enableSimulation false;";
 		};
 		class Item16
 		{
@@ -1786,7 +1791,7 @@ class Mission
 			vehicle="Land_OfficeChair_01_F";
 			leader=1;
 			skill=0.60000002;
-			init="this setPos [getPos this select 0, getPos this select 1, 1];";
+			init="this setPos [getPos this select 0, getPos this select 1, 1]; this enableSimulation false;";
 		};
 		class Item21
 		{
