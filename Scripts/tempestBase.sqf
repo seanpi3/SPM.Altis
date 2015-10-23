@@ -1,4 +1,4 @@
-		if(name vehicle _x == "MACK2411") then {	
+{if(name vehicle _x == "MACK2411") then {	
 			_x setPos getPos tempestBaseSpawn;
 			_x setDir 288;
 		};
@@ -26,4 +26,4 @@
 			_x setPos getPos tempestBaseSpawn;
 			_x setDir 288;
 		};
-	} forEach allUnits;
+} forEach allUnits;
