@@ -1611,7 +1611,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=63;
+		items=71;
 		class Item0
 		{
 			position[]={20075.762,101.14901,6720.7437};
@@ -2196,7 +2196,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
-			init="this setObjectTexture [0,""Resources\Temp.jpg""]";
+			init="this setObjectTexture [0,""Resources\bottommid.jpg""]";
 		};
 		class Item59
 		{
@@ -2234,6 +2234,86 @@ class Mission
 			side="EMPTY";
 			vehicle="I_supplyCrate_F";
 			skill=0.60000002;
+		};
+		class Item63
+		{
+			position[]={26738.414,20.592695,24661.34};
+			azimut=-49.494499;
+			id=113;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this setObjectTexture [0,""Resources\bottomleft.jpg""]";
+		};
+		class Item64
+		{
+			position[]={26746.332,20.33601,24670.49};
+			azimut=-49.494499;
+			id=114;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this setObjectTexture [0,""Resources\bottomright.jpg""]";
+		};
+		class Item65
+		{
+			position[]={26742.395,20.393085,24665.916};
+			azimut=-49.494499;
+			id=115;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this setObjectTexture [0,""Resources\middle.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 3.7]";
+		};
+		class Item66
+		{
+			position[]={26738.324,20.595146,24661.338};
+			azimut=-49.494499;
+			id=116;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this setObjectTexture [0,""Resources\midleft.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 3.5]";
+		};
+		class Item67
+		{
+			position[]={26746.281,20.336008,24670.492};
+			azimut=-49.494499;
+			id=117;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this setObjectTexture [0,""Resources\midright.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 3.8]";
+		};
+		class Item68
+		{
+			position[]={26742.352,20.393583,24665.914};
+			azimut=-49.494499;
+			id=118;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this setObjectTexture [0,""Resources\topmid.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 6.7]";
+		};
+		class Item69
+		{
+			position[]={26738.326,20.595039,24661.34};
+			azimut=-49.494499;
+			id=119;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this setObjectTexture [0,""Resources\topleft.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 6.5]";
+		};
+		class Item70
+		{
+			position[]={26746.285,20.335888,24670.582};
+			azimut=-49.494499;
+			id=120;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this setObjectTexture [0,""Resources\topright.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 6.8]";
 		};
 	};
 	class Markers
