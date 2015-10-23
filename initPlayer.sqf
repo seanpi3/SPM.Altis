@@ -6,6 +6,7 @@ fronzen = false;
 ready = false;
 squadReady = false;
 deploy = false;
+sitting = false;
 weapon = getText(configFile >> "cfgWeapons" >> (currentWeapon player) >> "displayName");
 squad = "none";
 [player] execVM "Scripts\loadout.sqf";
