@@ -292,7 +292,7 @@ class Mission
 					vehicle="O_soldier_UAV_F";
 					leader=1;
 					skill=0.60000002;
-					init="_NPC = [this] execVM ""NPCs\opforBaseNPC.sqf"";";
+					init="_NPC = [this] execVM ""NPCs\loadout.sqf""; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 1.5];";
 				};
 			};
 		};
@@ -311,7 +311,6 @@ class Mission
 					vehicle="O_helipilot_F";
 					leader=1;
 					skill=0.60000002;
-					init="_npc = [this] execVM ""NPCs\opforHeliNPC.sqf"";";
 				};
 			};
 		};
@@ -330,7 +329,7 @@ class Mission
 					vehicle="B_RangeMaster_F";
 					leader=1;
 					skill=0.60000002;
-					init="_npc = [this] execVM ""NPCs\blueforBaseNPC.sqf"";";
+					init="_npc = [this] execVM ""NPCs\loadout.sqf"";";
 				};
 			};
 		};
@@ -349,7 +348,6 @@ class Mission
 					vehicle="B_Helipilot_F";
 					leader=1;
 					skill=0.60000002;
-					init="_npc = [this] execVM ""NPCs\blueforHeliNPC.sqf"";";
 				};
 			};
 		};
@@ -1043,7 +1041,7 @@ class Mission
 					vehicle="C_scientist_F";
 					leader=1;
 					skill=0.60000002;
-					init="_NPC = [this] execVM ""NPCs\opforBaseMedic.sqf"";";
+					init="_NPC = [this] execVM ""NPCs\medic.sqf"";this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 1.5];";
 				};
 			};
 		};
@@ -1056,13 +1054,13 @@ class Mission
 				class Item0
 				{
 					position[]={20078.936,101.18071,6715.6553};
-					azimut=-326.71295;
+					azimut=-326.71301;
 					id=38;
 					side="CIV";
 					vehicle="C_scientist_F";
 					leader=1;
 					skill=0.60000002;
-					init="_npc = [this] execVM ""NPCs\blueforBaseMedic.sqf"";";
+					init="_npc = [this] execVM ""NPCs\medic.sqf"";";
 				};
 			};
 		};
@@ -1537,7 +1535,7 @@ class Mission
 					vehicle="B_CTRG_soldier_AR_A_F";
 					leader=1;
 					skill=0.60000002;
-					init="_npc = [this] execVM ""NPCs\blueforIntel.sqf"";";
+					init="_npc = [this] execVM ""NPCs\intel.sqf"";";
 				};
 			};
 		};
@@ -1556,7 +1554,7 @@ class Mission
 					vehicle="O_Story_CEO_F";
 					leader=1;
 					skill=0.60000002;
-					init="_npc = [this] execVM ""NPCs\opforIntel.sqf"";";
+					init="_npc = [this] execVM ""NPCs\intel.sqf"";";
 				};
 			};
 		};
@@ -1611,7 +1609,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=71;
+		items=73;
 		class Item0
 		{
 			position[]={20075.762,101.14901,6720.7437};
@@ -1690,8 +1688,8 @@ class Mission
 		};
 		class Item7
 		{
-			position[]={20091.27,100.58896,6717.4165};
-			azimut=652.82501;
+			position[]={20097.236,100.37712,6713.3521};
+			azimut=843.42615;
 			id=57;
 			side="EMPTY";
 			vehicle="Land_CampingChair_V2_F";
@@ -1839,7 +1837,7 @@ class Mission
 			vehicle="Land_OfficeChair_01_F";
 			leader=1;
 			skill=0.60000002;
-			init="this setPos [getPos this select 0, getPos this select 1, 1]; this enableSimulation false;";
+			init="this setPos [getPos this select 0, getPos this select 1, .4]; this enableSimulation false;";
 		};
 		class Item21
 		{
@@ -2314,6 +2312,28 @@ class Mission
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this setObjectTexture [0,""Resources\topright.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 6.8]";
+		};
+		class Item71
+		{
+			position[]={20076.557,101.15298,6717.771};
+			azimut=585.20935;
+			id=121;
+			side="EMPTY";
+			vehicle="Fridge_01_closed_F";
+			leader=1;
+			skill=0.60000002;
+			init="_r = [this] execVM ""NPCs\fridge.sqf"";";
+		};
+		class Item72
+		{
+			position[]={12850.627,90.564949,16678.477};
+			azimut=842.328;
+			id=122;
+			side="EMPTY";
+			vehicle="Fridge_01_closed_F";
+			leader=1;
+			skill=0.60000002;
+			init="_r = [this] execVM ""NPCs\fridge.sqf""; this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1]; this allowDamage false; this enableSimulation false;";
 		};
 	};
 	class Markers

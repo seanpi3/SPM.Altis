@@ -8,6 +8,7 @@ enableDebugConsole = 1;
 allowFunctionsLog = 1;
 
 #include "Resources\VAS\menu.hpp"
+
 class CfgSounds
 {
  

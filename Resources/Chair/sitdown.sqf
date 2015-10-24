@@ -32,3 +32,7 @@ _unit setDir ((getDir _chair) - 180);
 _unit setpos [getpos _chair select 0, getpos _chair select 1,((getpos _chair select 2) + 1)];
 sleep .6;
 disableUserInput false;
+
+if() then {
+
+};

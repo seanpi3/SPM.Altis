@@ -9,6 +9,7 @@ deploy = false;
 sitting = false;
 weapon = getText(configFile >> "cfgWeapons" >> (currentWeapon player) >> "displayName");
 squad = "none";
+redgull = 5;
 [player] execVM "Scripts\loadout.sqf";
 
 switch (playerSide) do {
@@ -43,14 +44,42 @@ disableSerialization;
 handler = { 
 	private['_handled'];
 	_handled = false;
-	switch (_this select 1) do {
+	_code = _this select 1;
+	switch (_code) do {
 	case 35: {
 		[] call fnc_holsterWeapon; 
 		};
 	};
-	case 16: {
+	case 20: {
 		[] execVM "Scripts\tempestBase.sqf";
+	};
+	if (_code in (actionKeys "User10")) then {
+		if (soundVolume < 0.21) then { 0 fadeSound 1; }
+		else { 0 fadeSound 0.2; };
+		systemChat format["Sound volume changed to %1%2.", soundVolume * 100, "%"];
+		_handled = true;
+	};
+	if (_code in (actionKeys "User11")) then {
+		if(redgull > 0) then
+		{
+			player setFatigue 0;
+			life_redgull_effect = time;
+			titleText["You can now run farther for 3 minutes","PLAIN"];
+			player enableFatigue false;
+			redgull = redgull - 1;
+			systemChat format["You now have %1 redgull(s)",redgull];
+			[] spawn
+			{
+				waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
+				player enableFatigue true;
+			};
+		}
+		else{
+			titleText["You have no more redgulls.","PLAIN"];
+		};
+		_handled = true;
 	};
 	_handled;
 };
+
 
