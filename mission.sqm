@@ -1609,7 +1609,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=73;
+		items=71;
 		class Item0
 		{
 			position[]={20075.762,101.14901,6720.7437};
@@ -2111,224 +2111,207 @@ class Mission
 		};
 		class Item50
 		{
-			position[]={20951.164,14.71383,19257.826};
+			position[]={26755.381,20.468288,24654.629};
+			azimut=-50.014999;
 			id=100;
 			side="EMPTY";
-			vehicle="OfficeTable_01_new_F";
+			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false; this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item51
 		{
-			position[]={26755.381,20.468288,24654.629};
-			azimut=-50.014999;
+			position[]={26757.363,20.469263,24654.768};
+			azimut=38.287102;
 			id=101;
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false; this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item52
 		{
-			position[]={20949.898,14.555425,19255.586};
+			position[]={26758.891,20.485559,24653.578};
+			azimut=37.8088;
 			id=102;
 			side="EMPTY";
-			vehicle="Land_ChairWood_F";
+			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="this addAction [""<t color='#0099FF'>Sit Down</t>"",""Resources\Chair\sitdown.sqf""]";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item53
 		{
-			position[]={26757.363,20.469263,24654.768};
-			azimut=38.287102;
+			position[]={26755.449,20.49301,24652.576};
+			azimut=219.985;
 			id=103;
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false; this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item54
 		{
-			position[]={26758.891,20.485559,24653.578};
-			azimut=37.8088;
+			position[]={26756.852,20.500381,24651.354};
+			azimut=221.02699;
 			id=104;
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf"";  this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item55
 		{
-			position[]={26755.449,20.49301,24652.576};
-			azimut=219.985;
+			position[]={26759.02,20.502502,24651.547};
+			azimut=131.28799;
 			id=105;
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false; this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf"";  this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item56
 		{
-			position[]={26756.852,20.500381,24651.354};
-			azimut=221.02699;
-			id=106;
-			side="EMPTY";
-			vehicle="Land_OfficeChair_01_F";
-			skill=0.60000002;
-			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf"";  this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
-		};
-		class Item57
-		{
-			position[]={26759.02,20.502502,24651.547};
-			azimut=131.28799;
-			id=107;
-			side="EMPTY";
-			vehicle="Land_OfficeChair_01_F";
-			skill=0.60000002;
-			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf"";  this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
-		};
-		class Item58
-		{
 			position[]={26742.35,20.394335,24665.869};
 			azimut=-49.494499;
-			id=108;
+			id=106;
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this setObjectTexture [0,""Resources\bottommid.jpg""]";
 		};
-		class Item59
+		class Item57
 		{
 			position[]={26738.355,21.120483,24654.693};
 			azimut=-49.494499;
-			id=109;
+			id=107;
 			side="EMPTY";
 			vehicle="Land_PaperBox_open_full_F";
 			skill=0.60000002;
 		};
-		class Item60
+		class Item58
 		{
 			position[]={26746.652,20.588221,24650.646};
 			azimut=112.90479;
-			id=110;
+			id=108;
 			side="EMPTY";
 			vehicle="Land_FloodLight_F";
 			skill=0.60000002;
 		};
-		class Item61
+		class Item59
 		{
 			position[]={26773.871,20.666113,24651.826};
 			azimut=-49.494499;
-			id=111;
+			id=109;
 			side="EMPTY";
 			vehicle="Box_NATO_AmmoVeh_F";
 			skill=0.60000002;
 			init="this addAction[""Sneaky's Loadout"", {removeUniform player;    removeHeadgear player;    removeVest player;    removeAllWeapons player;    removeAllItems player;    removeBackpack player;    player addVest 'V_PlateCarrier2_rgr';    player addUniform 'U_B_CTRG_1';    player addHeadgear 'H_RacingHelmet_1_black_F';    player addbackpack 'B_Kitbag_mcamo';    player addGoggles 'G_Tactical_Black';    player addweapon 'srifle_EBR_F';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player addMagazine '20Rnd_762x51_Mag';    player additem 'optic_HAMR';    player additem 'toolkit';    life_inv_painkillers=8;    life_inv_splint=1;    life_inv_bloodbag=8;    life_inv_redgull=18;    life_inv_defib=1;    life_inv_debitcard=1;    life_inv_lockpick=5;    life_inv_water=3;    life_inv_tbacon=3;    life_inv_ziptie=2;    player additem 'NVGoggles';    player additem 'itemGPS';    player additem 'HandGrenade';    player additem 'HandGrenade';    player additem 'SmokeShellPurple';    player additem 'SmokeShellGreen';    player additem 'SmokeShellGreen';    player additem 'ItemCompass';    player additem 'ItemMap';},nil,1.5,true,true,"""",""_this distance _target <= 5""];";
 		};
-		class Item62
+		class Item60
 		{
 			position[]={26771.254,20.5977,24653.662};
 			azimut=25.41855;
-			id=112;
+			id=110;
 			side="EMPTY";
 			vehicle="I_supplyCrate_F";
 			skill=0.60000002;
 		};
-		class Item63
+		class Item61
 		{
 			position[]={26738.414,20.592695,24661.34};
 			azimut=-49.494499;
-			id=113;
+			id=111;
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this setObjectTexture [0,""Resources\bottomleft.jpg""]";
 		};
-		class Item64
+		class Item62
 		{
 			position[]={26746.332,20.33601,24670.49};
 			azimut=-49.494499;
-			id=114;
+			id=112;
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this setObjectTexture [0,""Resources\bottomright.jpg""]";
 		};
-		class Item65
+		class Item63
 		{
 			position[]={26742.395,20.393085,24665.916};
 			azimut=-49.494499;
-			id=115;
+			id=113;
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this setObjectTexture [0,""Resources\middle.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 3.7]";
 		};
-		class Item66
+		class Item64
 		{
 			position[]={26738.324,20.595146,24661.338};
 			azimut=-49.494499;
-			id=116;
+			id=114;
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this setObjectTexture [0,""Resources\midleft.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 3.5]";
 		};
-		class Item67
+		class Item65
 		{
 			position[]={26746.281,20.336008,24670.492};
 			azimut=-49.494499;
-			id=117;
+			id=115;
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this setObjectTexture [0,""Resources\midright.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 3.8]";
 		};
-		class Item68
+		class Item66
 		{
 			position[]={26742.352,20.393583,24665.914};
 			azimut=-49.494499;
-			id=118;
+			id=116;
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this setObjectTexture [0,""Resources\topmid.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 6.7]";
 		};
-		class Item69
+		class Item67
 		{
 			position[]={26738.326,20.595039,24661.34};
 			azimut=-49.494499;
-			id=119;
+			id=117;
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this setObjectTexture [0,""Resources\topleft.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 6.5]";
 		};
-		class Item70
+		class Item68
 		{
 			position[]={26746.285,20.335888,24670.582};
 			azimut=-49.494499;
-			id=120;
+			id=118;
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this setObjectTexture [0,""Resources\topright.jpg""]; this setPos [getpos this select 0, getpos this select 1, (getpos this select 2) + 6.8]";
 		};
-		class Item71
+		class Item69
 		{
 			position[]={20076.557,101.15298,6717.771};
 			azimut=585.20935;
-			id=121;
+			id=119;
 			side="EMPTY";
 			vehicle="Fridge_01_closed_F";
 			leader=1;
 			skill=0.60000002;
 			init="_r = [this] execVM ""NPCs\fridge.sqf"";";
 		};
-		class Item72
+		class Item70
 		{
 			position[]={12850.627,90.564949,16678.477};
 			azimut=842.328;
-			id=122;
+			id=120;
 			side="EMPTY";
 			vehicle="Fridge_01_closed_F";
 			leader=1;
