@@ -21,6 +21,7 @@ sleep .4;
 
 sitting = true;
 _chair setVariable ["sitting", true, true];
+_chair setVariable ["player", _unit,true];
 [[_unit, "Crew"], "MAC_fnc_switchMove"] spawn BIS_fnc_MP;
 
 _unit setPos (getPos _chair); 
@@ -32,7 +33,3 @@ _unit setDir ((getDir _chair) - 180);
 _unit setpos [getpos _chair select 0, getpos _chair select 1,((getpos _chair select 2) + 1)];
 sleep .6;
 disableUserInput false;
-
-if() then {
-
-};

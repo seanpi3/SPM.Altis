@@ -23,3 +23,7 @@ else{
 	player execVM "scripts\simpleEP.sqf";
 };
 
+
+tempestMembers = ["Ozadu","-T- Ozadu","-T- Mack",
+	"-T- Steez","-T- Sneaky","-T- Chaotic",
+	"-T- Mr Monopoly Man"];

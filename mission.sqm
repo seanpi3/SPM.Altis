@@ -1689,13 +1689,13 @@ class Mission
 		class Item7
 		{
 			position[]={20097.236,100.37712,6713.3521};
-			azimut=843.42615;
+			azimut=843.42603;
 			id=57;
 			side="EMPTY";
 			vehicle="Land_CampingChair_V2_F";
 			leader=1;
 			skill=0.60000002;
-			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf"";";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; _chair = [this] execVM ""scripts\tempestChair.sqf"";";
 		};
 		class Item8
 		{
