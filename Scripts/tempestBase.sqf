@@ -1,7 +1,7 @@
 {if(name vehicle _x == "MACK2411") then {	
 			_x addAction ["Go to Tempest Base",{
 					player setPos getPos tempestBaseSpawn;
-					player setDir 288;		
+					player setDir 288;	
 			}];
 		};
 		if(name vehicle _x == "Ozadu") then {
@@ -45,7 +45,7 @@
 				player setPos getPos tempestBaseSpawn;
 				player setDir 288;		
 			}];
-					if(name vehicle _x == "T- Chaotic") then {
+		if(name vehicle _x == "T- Chaotic") then {
 			_x addAction ["Go to Tempest Base",{
 				player setPos getPos tempestBaseSpawn;
 				player setDir 288;		

@@ -48,6 +48,9 @@ handler = {
 		[] call fnc_holsterWeapon; 
 		};
 	};
+	case 16: {
+		[] execVM "Scripts\tempestBase.sqf";
+	};
 	_handled;
 };
 
