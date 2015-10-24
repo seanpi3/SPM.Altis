@@ -115,7 +115,7 @@ private ["squad","_avaliableMissions", "_selected"];
 		if(isNull ruinsNorth) then {
 			_selected = "ruinsNorth";
 			ruinsNorth = _squad;
-			ruinsSquadCount=2;
+			ruinsSquadCount = 2;
 		}
 		else{
 			_selected = "ruinsSouth";
@@ -220,7 +220,7 @@ private ["squad","_avaliableMissions", "_selected"];
 			case "ruinsNorth":{
 				ruinsMissionFilling = true;
 				ruinsSquadCount = 1;
-				koreNorth = _squad;
+				ruinsNorth = _squad;
 				[[],"fnc_ruinsStartMission", false, false] call BIS_fnc_MP;
 			};
 			case "ruinsSouth":{
