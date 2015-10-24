@@ -114,12 +114,13 @@ while{castleMissionInProgress} do {
 	if(isNull castleOffence || isNull castleDefence) then {
 		castleMissionInProgress = false;
 	};
-	if(_offence == []) then {
+	/*if(_offence == []) then {
 		[["MissionCompleted",format
 			["The other team has been eliminated!"]
 		],"fnc_notify", castleDefence, false] call BIS_fnc_MP;
 		castleMissionInProgress = false;
 	};
+	*/
 	if(_defence == []) then {
 		[["MissionCompleted",format
 			["The other team has been eliminated!"]
