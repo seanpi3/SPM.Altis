@@ -109,10 +109,32 @@ playersReady = [];
 [[],"fnc_methFlag",methDefence, false] call bis_fnc_MP;
 //mission run
 while{methMissionInProgress} do {
-	sleep 2;
-	if(isNull methOffence || isNull methDefence) then {
+if(isNull methOffence || isNull methDefence) then {
 		methMissionInProgress = false;
 	};
+	if(_offence == []) then {
+		[["MissionCompleted",format
+			["The other team has been eliminated!"]
+		],"fnc_notify", methDefence, false] call BIS_fnc_MP;
+		methMissionInProgress = false;
+	};
+	if(_defence == []) then {
+		[["MissionCompleted",format
+			["The other team has been eliminated!"]
+		],"fnc_notify", methOffence, false] call BIS_fnc_MP;
+		methMissionInProgress = false;
+	};
+	{
+		if(!alive _x) then {
+			_offence = _offence - [_x];
+		};
+	} forEach _offence;
+	{
+		if(!alive _x) then {
+			_offence = _offence - [_x];
+		};
+	} forEach _defence;
+	sleep 1;
 };
 
 [[methOffence, methDefence],"fnc_returnToBase"] call BIS_fnc_MP;

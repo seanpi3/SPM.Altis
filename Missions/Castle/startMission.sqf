@@ -27,8 +27,10 @@ publicVariable "castleMissionFilling";
 castleMissionInProgress = true;
 publicVariable "castleMissionInProgress";
 
-//waiting for squads to be ready
+_offence = units castleOffence;
+_defence = units castleDefence;
 
+//waiting for squads to be ready
 _squad1Ready = false;
 _squad2Ready = false;
 while{!_squad1Ready || !_squad2Ready} do {
@@ -109,10 +111,32 @@ playersReady = [];
 [[],"fnc_castleFlag",castleDefence, false] call bis_fnc_MP;
 //mission run
 while{castleMissionInProgress} do {
-	sleep 2;
 	if(isNull castleOffence || isNull castleDefence) then {
 		castleMissionInProgress = false;
 	};
+	if(_offence == []) then {
+		[["MissionCompleted",format
+			["The other team has been eliminated!"]
+		],"fnc_notify", castleDefence, false] call BIS_fnc_MP;
+		castleMissionInProgress = false;
+	};
+	if(_defence == []) then {
+		[["MissionCompleted",format
+			["The other team has been eliminated!"]
+		],"fnc_notify", castleOffence, false] call BIS_fnc_MP;
+		castleMissionInProgress = false;
+	};
+	{
+		if(!alive _x) then {
+			_offence = _offence - [_x];
+		};
+	} forEach _offence;
+	{
+		if(!alive _x) then {
+			_offence = _offence - [_x];
+		};
+	} forEach _defence;
+	sleep 1;
 };
 
 [[castleOffence, castleDefence],"fnc_returnToBase"] call BIS_fnc_MP;
