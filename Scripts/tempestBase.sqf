@@ -1,54 +1,54 @@
 {if(name vehicle _x == "MACK2411") then {	
-			player addAction ["Go to Tempest Base",{
-					_x setPos getPos tempestBaseSpawn;
-					_x setDir 288;		
+			_x addAction ["Go to Tempest Base",{
+					player setPos getPos tempestBaseSpawn;
+					player setDir 288;		
 			}];
 		};
 		if(name vehicle _x == "Ozadu") then {
-				player addAction ["Go to Tempest Base",{
-					_x setPos getPos tempestBaseSpawn;
-					_x setDir 288;		
+				_x addAction ["Go to Tempest Base",{
+					player setPos getPos tempestBaseSpawn;
+					player setDir 288;		
 			}];
 		};
 		if(name vehicle _x == "-T- Ozadu") then {
-				player addAction ["Go to Tempest Base",{
-					_x setPos getPos tempestBaseSpawn;
-					_x setDir 288;		
+				_x addAction ["Go to Tempest Base",{
+					player setPos getPos tempestBaseSpawn;
+					player setDir 288;		
 			}];
 		};
 		if(name vehicle _x == "-T- Mack") then {
-			player addAction ["Go to Tempest Base",{
-				_x setPos getPos tempestBaseSpawn;
-				_x setDir 288;		
+			_x addAction ["Go to Tempest Base",{
+				player setPos getPos tempestBaseSpawn;
+				player setDir 288;		
 			}];
 		};
 		if(name vehicle _x == "-T- Sneaky") then {
-			player addAction ["Go to Tempest Base",{
-				_x setPos getPos tempestBaseSpawn;
-				_x setDir 288;		
+			_x addAction ["Go to Tempest Base",{
+				player setPos getPos tempestBaseSpawn;
+				player setDir 288;		
 			}];
 		};
 		if(name vehicle _x == "-T- Sasquatch") then {
-			player addAction ["Go to Tempest Base",{
-				_x setPos getPos tempestBaseSpawn;
+			_x addAction ["Go to Tempest Base",{
+				player setPos getPos tempestBaseSpawn;
 				_x setDir 288;		
 			}];
 		};
 		if(name vehicle _x == "T- Steez") then {
-			player addAction ["Go to Tempest Base",{
-				_x setPos getPos tempestBaseSpawn;
-				_x setDir 288;		
+			_x addAction ["Go to Tempest Base",{
+				player setPos getPos tempestBaseSpawn;
+				player setDir 288;		
 			}];
 		};
-				if(name vehicle _x == "T- Jamooze") then {
-			player addAction ["Go to Tempest Base",{
-				_x setPos getPos tempestBaseSpawn;
-				_x setDir 288;		
+		if(name vehicle _x == "T- Jamooze") then {
+			_x addAction ["Go to Tempest Base",{
+				player setPos getPos tempestBaseSpawn;
+				player setDir 288;		
 			}];
 					if(name vehicle _x == "T- Chaotic") then {
-			player addAction ["Go to Tempest Base",{
-				_x setPos getPos tempestBaseSpawn;
-				_x setDir 288;		
+			_x addAction ["Go to Tempest Base",{
+				player setPos getPos tempestBaseSpawn;
+				player setDir 288;		
 			}];
 		};
 		};
