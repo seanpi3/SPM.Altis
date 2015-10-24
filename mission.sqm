@@ -1697,7 +1697,7 @@ class Mission
 			vehicle="Land_CampingChair_V2_F";
 			leader=1;
 			skill=0.60000002;
-			init="this addAction [""<t color='#0099FF'>Sit Down</t>"",""Resources\Chair\sitdown.sqf""]";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf"";";
 		};
 		class Item8
 		{
@@ -2127,7 +2127,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="this addAction [""<t color='#0099FF'>Sit Down</t>"",""Resources\Chair\sitdown.sqf""]; this enableSimulation false; this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false; this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item52
 		{
@@ -2146,7 +2146,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="this addAction [""<t color='#0099FF'>Sit Down</t>"",""Resources\Chair\sitdown.sqf""]; this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item54
 		{
@@ -2156,7 +2156,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="this addAction [""<t color='#0099FF'>Sit Down</t>"",""Resources\Chair\sitdown.sqf""]; this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item55
 		{
@@ -2166,7 +2166,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="this addAction [""<t color='#0099FF'>Sit Down</t>"",""Resources\Chair\sitdown.sqf""]; this enableSimulation false; this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf""; this enableSimulation false; this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item56
 		{
@@ -2176,7 +2176,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="this addAction [""<t color='#0099FF'>Sit Down</t>"",""Resources\Chair\sitdown.sqf""]; this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf"";  this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item57
 		{
@@ -2186,7 +2186,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init="this addAction [""<t color='#0099FF'>Sit Down</t>"",""Resources\Chair\sitdown.sqf""]; this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
+			init="_chair=[this] execVM ""Resources\Chair\initChair.sqf"";  this enableSimulation false;this setPos [getPos this select 0, getPos this select 1, (getPos this select 2) + 1.2];";
 		};
 		class Item58
 		{
