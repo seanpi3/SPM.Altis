@@ -1535,7 +1535,7 @@ class Mission
 					vehicle="B_CTRG_soldier_AR_A_F";
 					leader=1;
 					skill=0.60000002;
-					init="_npc = [this] execVM ""NPCs\intel.sqf"";";
+					init="_npc = [this] execVM ""NPCs\blueforIntel.sqf"";";
 				};
 			};
 		};
@@ -1554,7 +1554,7 @@ class Mission
 					vehicle="O_Story_CEO_F";
 					leader=1;
 					skill=0.60000002;
-					init="_npc = [this] execVM ""NPCs\intel.sqf"";";
+					init="_npc = [this] execVM ""NPCs\opforIntel.sqf"";";
 				};
 			};
 		};
