@@ -16,10 +16,8 @@ _unit = _this select 1;
 if (sitting) exitWith{};
 if(_chair getVariable "sitting") exitWith{};
 disableUserInput true;
-player switchMove "";  
 _unit setVelocity [0,0,0];
-sleep .4;
-
+player switchMove "AmovPercMstpSlowWrflDnon";  
 sitting = true;
 _chair setVariable ["sitting", true, true];
 _chair setVariable ["player", _unit,true];

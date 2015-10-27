@@ -7,6 +7,7 @@ standup = _unit addAction ["<t color='#0099FF'>Stand Up</t>", {
 					sitting = false;
 		}
 ];
-waitUntil{!sitting};
+_player = _chair getVariable "player";
+waitUntil {! _player getVariable "sitting"};
 _chair setVariable ["sitting", false, true];
 _chair setVariable ["player", ObjNull, true];
