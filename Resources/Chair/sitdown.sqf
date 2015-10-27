@@ -18,7 +18,7 @@ if(_chair getVariable "sitting") exitWith{};
 disableUserInput true;
 _unit setVelocity [0,0,0];
 player switchMove "AmovPercMstpSlowWrflDnon";  
-sitting = true;
+player setVariable ["sitting",true,true];
 _chair setVariable ["sitting", true, true];
 _chair setVariable ["player", _unit,true];
 [[_unit, "Crew"], "MAC_fnc_switchMove"] spawn BIS_fnc_MP;

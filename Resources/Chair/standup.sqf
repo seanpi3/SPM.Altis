@@ -4,10 +4,10 @@ _unit = _this select 1;
 standup = _unit addAction ["<t color='#0099FF'>Stand Up</t>", {
 					player switchMove "";  
 					player removeAction standup;
-					sitting = false;
+					player setVariable ["sitting",false,true];
 		}
 ];
 _player = _chair getVariable "player";
-waitUntil {! _player getVariable "sitting"};
+waitUntil {! (_player getVariable "sitting")};
 _chair setVariable ["sitting", false, true];
 _chair setVariable ["player", ObjNull, true];
