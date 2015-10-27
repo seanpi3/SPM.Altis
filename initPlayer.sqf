@@ -34,7 +34,7 @@ switch (playerSide) do {
 	default {hint "You shouldn't be here..."};
 };
 
-[] call fnc_playerActions;
+//[] call fnc_playerActions;
 [] execVM "Scripts\player_markers.sqf";
 //[] execVM "Scripts\tempestBase.sqf";
 waitUntil {!isNull(findDisplay 46)};
