@@ -8,6 +8,7 @@ while{true} do {
 	waitUntil{!isNull (_chair getVariable "player")};
 	_player = (_chair getVariable "player");
 	sleep 5;
+	if(isNull (_chair getVariable "player")) exitWith{};
 	if(name _player in tempestMembers) then {
 		_player setPos getPos tempestBaseSpawn;
 		_player setDir 288;	
