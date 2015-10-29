@@ -3,6 +3,7 @@ onLoadName = "Squad Mission Alpha";
 respawn = 3;
 respawndelay = 10;
 respawnDialog = 0;
+respawnOnStart = -1;
 disabledAI = 1;
 joinUnassigned = 0;
 enableDebugConsole = 1;

@@ -10,7 +10,7 @@ sitting = false;
 weapon = getText(configFile >> "cfgWeapons" >> (currentWeapon player) >> "displayName");
 squad = "none";
 redgull = 5;
-[player] execVM "Scripts\loadout.sqf";
+[player] call fnc_initLoadout;
 
 switch (playerSide) do {
 	case west: 

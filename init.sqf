@@ -1,6 +1,5 @@
 enableSaving [false, false];
-enableSentences = flase;
-
+enableSentences false;
 if (isDedicated) then {
 	[] execVM "Missions\initMissions.sqf";
 	[] execVM "functions.sqf";
@@ -22,9 +21,8 @@ if (isDedicated) then {
 else{
 	call compile preprocessFileLineNumbers "ShoterAnimation\init.sqf";
 	[] execVM "functions.sqf";
-	player execVM "scripts\simpleEP.sqf";
+	//player execVM "scripts\simpleEP.sqf";
 };
-
 
 tempestMembers = ["Ozadu","-T- Ozadu","-T- MACK2411",
 	"-T- Steez","-T- Sneaky","-T- Chaotic",
