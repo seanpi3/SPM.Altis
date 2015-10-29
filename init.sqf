@@ -15,7 +15,7 @@ if (isDedicated) then {
 		0, // seconds to deleted planted explosives (0 means don't delete)
 		0 // seconds to delete dropped smokes/chemlights (0 means don't delete)
 	] execVM 'Scripts\repetitive_cleanup.sqf';
-	call compile preProcessFile "\inidbi\init.sqf";
+	
 
 }
 else{

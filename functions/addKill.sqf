@@ -1,2 +1,2 @@
-kills = kills + 1;
-[["kill",player,kills],"informServer",true,false] call bis_fnc_MP;
+playerKills = playerKills + 1;
+profile setVariable ["SPM_kills", playerKills];

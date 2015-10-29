@@ -10,11 +10,7 @@ sitting = false;
 weapon = getText(configFile >> "cfgWeapons" >> (currentWeapon player) >> "displayName");
 squad = "none";
 redgull = 5;
-kills = 0;
-deaths = 0;
 [player] call fnc_initLoadout;
-
-[["stats", player],"fnc_informServer", false,false] call bis_fnc_mp;
 
 switch (playerSide) do {
 	case west: 
