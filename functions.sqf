@@ -7,6 +7,8 @@ MAC_fnc_switchMove = {
     _object switchMove _anim;
 };
 
+fnc_initPlayer = compile preprocessFileLineNumbers "initPlayer.sqf";
+
 fnc_paintball = compile preprocessFileLineNumbers "debug\paintball.sqf";
 fnc_animation = compile preprocessFileLineNumbers "ShoterAnimation\ShoterAnimation.sqf";
 fnc_endAnimation = compile preprocessFileLineNumbers "ShoterAnimation\endAnimation.sqf";

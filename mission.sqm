@@ -698,7 +698,7 @@ class Mission
 				class Item0
 				{
 					position[]={15877.108,14.359846,16989.273};
-					azimut=-275.44177;
+					azimut=-275.44199;
 					class args
 					{
 						items=4;
@@ -733,7 +733,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="FedWestLoc = getPos this";
+					text="FedWestLoc";
 				};
 			};
 		};
@@ -746,7 +746,7 @@ class Mission
 				class Item0
 				{
 					position[]={16250.263,14.118115,16993.26};
-					azimut=-100.59731;
+					azimut=-100.597;
 					class args
 					{
 						items=4;
@@ -781,7 +781,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="FedEastLoc = getPos this";
+					text="FedEastLoc";
 				};
 			};
 		};
@@ -793,8 +793,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={20309.121,9.3356323,14790.637};
-					azimut=93.945007;
+					position[]={20643.301,2.0476246,14754.765};
+					azimut=93.945;
 					class args
 					{
 						items=4;
@@ -829,7 +829,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="swampTeam1Spawn = getPos this;";
+					text="swampTeam1Spawn";
 				};
 			};
 		};
@@ -841,8 +841,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={21699.57,3.958379,14637.232};
-					azimut=-93.807175;
+					position[]={21442.801,1.8264453,14690.097};
+					azimut=-93.807198;
 					class args
 					{
 						items=4;
@@ -877,7 +877,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="swampTeam2Spawn = getPos this;";
+					text="swampTeam2Spawn";
 				};
 			};
 		};
@@ -937,7 +937,7 @@ class Mission
 				class Item0
 				{
 					position[]={13228.73,17.95356,11715.063};
-					azimut=43.480373;
+					azimut=43.4804;
 					class args
 					{
 						items=4;
@@ -972,7 +972,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="islandSouthSpawn = getPos this;";
+					text="islandSouthSpawn";
 					description="Assault The Castle";
 				};
 			};
@@ -986,7 +986,7 @@ class Mission
 				class Item0
 				{
 					position[]={13702.866,15.015929,12351.198};
-					azimut=-153.16725;
+					azimut=-153.16701;
 					class args
 					{
 						items=4;
@@ -1021,7 +1021,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="islandNorthSpawn = getPos this;";
+					text="islandNorthSpawn";
 					description="Assault The Castle";
 				};
 			};
@@ -1073,7 +1073,7 @@ class Mission
 				class Item0
 				{
 					position[]={10281.937,138.36952,19193.42};
-					azimut=188.56192;
+					azimut=188.562;
 					class args
 					{
 						items=4;
@@ -1108,7 +1108,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="galatiNorthSpawn = getPos this;";
+					text="galatiNorthSpawn";
 				};
 			};
 		};
@@ -1156,7 +1156,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="galatiSouthSpawn = getPos this;";
+					text="galatiSouthSpawn";
 				};
 			};
 		};
@@ -1204,7 +1204,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="koreNorthSpawn = getPos this;";
+					text="koreNorthSpawn";
 				};
 			};
 		};
@@ -1252,7 +1252,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="koreSouthSpawn = getPos this;";
+					text="koreSouthSpawn";
 				};
 			};
 		};
@@ -1265,78 +1265,42 @@ class Mission
 				class Item0
 				{
 					position[]={21443.639,7.9328909,10763.685};
-					azimut=49.826675;
+					azimut=49.826698;
 					class args
 					{
-						items=10;
+						items=4;
 						class Item0
 						{
 							value="";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="Delay";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Name";
 						};
 						class Item1
 						{
-							value="";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="DesertedDistance";
+							value="0";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Type";
 						};
 						class Item2
 						{
-							value="";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="RespawnCount";
+							value="-1";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Side";
 						};
 						class Item3
 						{
-							value="";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="Init";
-						};
-						class Item4
-						{
 							value="0";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="Position";
-						};
-						class Item5
-						{
-							value="0";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="PositionType";
-						};
-						class Item6
-						{
-							value="2";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="Wreck";
-						};
-						class Item7
-						{
-							value="1";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="ShowNotification";
-						};
-						class Item8
-						{
-							value="0";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="ForcedRespawn";
-						};
-						class Item9
-						{
-							value="0";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="RespawnWhenDisabled";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Marker";
 						};
 					};
 					id=43;
 					side="LOGIC";
-					vehicle="ModuleRespawnVehicle_F";
+					vehicle="ModuleRespawnPosition_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="ruinsSouthSpawn = getPos this;";
+					text="ruinsSouthSpawn";
 				};
 			};
 		};
@@ -1352,75 +1316,39 @@ class Mission
 					azimut=-143.243;
 					class args
 					{
-						items=10;
+						items=4;
 						class Item0
 						{
 							value="";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="Delay";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Name";
 						};
 						class Item1
 						{
-							value="";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="DesertedDistance";
+							value="0";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Type";
 						};
 						class Item2
 						{
-							value="";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="RespawnCount";
+							value="-1";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Side";
 						};
 						class Item3
 						{
-							value="";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="Init";
-						};
-						class Item4
-						{
 							value="0";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="Position";
-						};
-						class Item5
-						{
-							value="0";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="PositionType";
-						};
-						class Item6
-						{
-							value="2";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="Wreck";
-						};
-						class Item7
-						{
-							value="1";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="ShowNotification";
-						};
-						class Item8
-						{
-							value="0";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="ForcedRespawn";
-						};
-						class Item9
-						{
-							value="0";
-							parentCls="ModuleRespawnVehicle_F";
-							typeName="RespawnWhenDisabled";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Marker";
 						};
 					};
 					id=44;
 					side="LOGIC";
-					vehicle="ModuleRespawnVehicle_F";
+					vehicle="ModuleRespawnPosition_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="ruinsNorthSpawn = getPos this;";
+					text="ruinsNorthSpawn";
 				};
 			};
 		};
@@ -1468,7 +1396,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="methDefenceSpawn = getPos this;";
+					text="methDefenceSpawn";
 				};
 			};
 		};
@@ -1481,7 +1409,7 @@ class Mission
 				class Item0
 				{
 					position[]={13028.637,15.995201,13421.859};
-					azimut=-259.2561;
+					azimut=-259.25601;
 					class args
 					{
 						items=4;
@@ -1516,7 +1444,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="methOffenceSpawn = getPos this;";
+					text="methOffenceSpawn";
 				};
 			};
 		};
