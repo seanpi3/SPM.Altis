@@ -22,6 +22,7 @@ else{
 	call compile preprocessFileLineNumbers "ShoterAnimation\init.sqf";
 	[] execVM "functions.sqf";
 	//player execVM "scripts\simpleEP.sqf";
+	[] execVM "initPlayer.sqf";
 };
 
 tempestMembers = ["Ozadu","-T- Ozadu","-T- MACK2411",
