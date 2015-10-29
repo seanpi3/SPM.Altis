@@ -1,4 +1,6 @@
 enableSaving [false, false];
+enableSentences = flase;
+
 if (isDedicated) then {
 	[] execVM "Missions\initMissions.sqf";
 	[] execVM "functions.sqf";
