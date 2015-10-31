@@ -12,6 +12,10 @@ squad = "none";
 redgull = 5;
 [player] call fnc_initLoadout;
 
+kills=0;
+deaths=0;
+[["stats",player],"fnc_informServer",false,false] call bis_fnc_mp;
+
 switch (playerSide) do {
 	case west: 
 	{	
@@ -28,7 +32,7 @@ switch (playerSide) do {
 	
 	case resistance:
 	{
-		
+			
 	};
 
 	default {hint "You shouldn't be here..."};

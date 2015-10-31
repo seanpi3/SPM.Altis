@@ -1,2 +1,2 @@
-playerDeaths = playerDeaths + 1;
-profile setVariable ["SPM_deaths", playerDeaths];
+deaths = deaths + 1;
+[["death",player,deaths],"fnc_informServer",false,false] call bis_fnc_mp;
