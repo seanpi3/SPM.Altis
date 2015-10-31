@@ -17,5 +17,7 @@ switch(_variable) do {
 	case "stats":{
 		_kills = _this select 1;
 		_deaths = _this select 2;
+		kills = _kills;
+		deaths = _deaths;
 	};
 };

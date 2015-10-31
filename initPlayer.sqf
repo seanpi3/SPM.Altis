@@ -14,6 +14,7 @@ redgull = 5;
 
 kills=0;
 deaths=0;
+
 [["stats",player],"fnc_informServer",false,false] call bis_fnc_mp;
 
 switch (playerSide) do {
@@ -40,7 +41,6 @@ switch (playerSide) do {
 
 //[] call fnc_playerActions;
 [] execVM "Scripts\player_markers.sqf";
-//[] execVM "Scripts\tempestBase.sqf";
 waitUntil {!isNull(findDisplay 46)};
 disableSerialization;
  _display = findDisplay 46;

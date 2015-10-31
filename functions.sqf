@@ -8,6 +8,7 @@ MAC_fnc_switchMove = {
 };
 
 fnc_initLoadout = compile preprocessFileLineNumbers "functions\initialLoadout.sqf";
+fnc_viewStats = compile preprocessFileLineNumbers "functions\viewStats.sqf";
 
 fnc_paintball = compile preprocessFileLineNumbers "debug\paintball.sqf";
 fnc_animation = compile preprocessFileLineNumbers "ShoterAnimation\ShoterAnimation.sqf";
