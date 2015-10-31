@@ -1,2 +1,0 @@
-opforMission= "";
-publicVariable "opforMission";

@@ -3,8 +3,7 @@ enableSentences false;
 if (isDedicated) then {
 	[] execVM "Missions\initMissions.sqf";
 	[] execVM "functions.sqf";
-	[] execVM "Squads\initOpfor.sqf";
-	[] execVM "Squads\initBluefor.sqf";
+	[] execVM "Squads\initSquads.sqf";
 	
 	//Cleanup Script
 	call compile preprocessFileLineNumbers "ShoterAnimation\init.sqf";

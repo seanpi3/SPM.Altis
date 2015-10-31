@@ -33,7 +33,7 @@ switch (playerSide) do {
 	
 	case resistance:
 	{
-			
+		
 	};
 
 	default {hint "You shouldn't be here..."};
