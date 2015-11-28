@@ -1,3 +1,6 @@
+/*
+	Facilitates communication between server and client.
+*/
 private["_variable"];
 _variable = _this select 0;
 

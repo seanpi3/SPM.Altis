@@ -1,3 +1,6 @@
+/*
+	Initialization for the base medic NPC.
+*/
 _NPC = _this select 0;
 _NPC disableAI "ANIM";
 _NPC allowDamage false;

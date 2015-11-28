@@ -1,3 +1,6 @@
+/*
+	Initializes the missions at the beginning of the mission.
+*/
 playersReady = [];
 
 //castle mission

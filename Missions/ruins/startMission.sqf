@@ -1,3 +1,6 @@
+/*
+	Ruins mission run.
+*/
 if(!isDedicated) exitWith {};
 
 //Waiting for squads

@@ -1,3 +1,6 @@
+/*
+	Initializes the player. Called every time the player spawns.
+*/
 private ["_spawn","_display"];
 waitUntil {!isNull player};
 systemChat "Initializing player...";
@@ -33,7 +36,7 @@ switch (playerSide) do {
 	
 	case resistance:
 	{
-		
+		//Indipendent not implemented yet
 	};
 
 	default {hint "You shouldn't be here..."};

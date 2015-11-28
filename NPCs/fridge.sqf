@@ -1,3 +1,6 @@
+/*
+	Initialization for the base refridgerators.
+*/
 private ["_fridge"];
 _fridge = _this select 0;
 

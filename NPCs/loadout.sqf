@@ -1,3 +1,6 @@
+/*
+	Initialization for the base loadout NPC.
+*/
 _NPC = _this select 0;
 removeAllWeapons _NPC;
 _NPC allowDamage false;

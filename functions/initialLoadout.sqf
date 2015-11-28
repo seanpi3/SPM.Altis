@@ -1,3 +1,6 @@
+/*
+	Standard initial loadout for players.
+*/
 private ["_unit"];
 _unit = _this select 0;
 

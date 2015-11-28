@@ -1,3 +1,6 @@
+/*
+	Called when a player receives a mission
+*/
 private["_squad","_mission"];
 _squad = _this select 0;
 _mission = _this select 1;

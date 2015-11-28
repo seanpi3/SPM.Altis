@@ -1,3 +1,6 @@
+/*
+	Galati mission run.
+*/
 if(!isDedicated) exitWith {};
 
 //Waiting for squads

@@ -1,3 +1,6 @@
+/*
+	Returns a mission when a player gets intel.
+*/
 private ["squad","_avaliableMissions", "_selected"];
 	if(!isDedicated) exitWith {};
 	_squad = _this select 0;

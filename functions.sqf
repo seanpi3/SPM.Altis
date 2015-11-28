@@ -1,3 +1,7 @@
+/*
+	Compiles all the functions neccissary for the mission.
+*/
+
 fnc_getMission = compile preprocessFileLineNumbers "functions\getMission.sqf";
 
 MAC_fnc_switchMove = {

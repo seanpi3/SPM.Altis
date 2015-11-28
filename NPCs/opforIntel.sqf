@@ -1,3 +1,6 @@
+/*
+	Initialization for the opfor base intel NPC.
+*/
 private["_npc"];
 _npc = _this select 0;
 _npc allowDamage false;
