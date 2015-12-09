@@ -25,7 +25,3 @@ else{
 	//player execVM "scripts\simpleEP.sqf";
 	[] execVM "initPlayer.sqf";
 };
-
-tempestMembers = ["Ozadu","-T- Ozadu","-T- MACK2411",
-	"-T- Steez","-T- Sneaky","-T- Chaotic",
-	"-T- Mr Monopoly Man"];
