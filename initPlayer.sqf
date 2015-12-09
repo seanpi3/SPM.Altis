@@ -13,6 +13,7 @@ sitting = false;
 weapon = getText(configFile >> "cfgWeapons" >> (currentWeapon player) >> "displayName");
 squad = "none";
 redgull = 5;
+earplugs = false;
 [player] call fnc_initLoadout;
 
 kills=0;
@@ -61,23 +62,32 @@ handler = {
 		[] execVM "Scripts\tempestBase.sqf";
 	};
 	if (_code in (actionKeys "User10")) then {
-		if (soundVolume < 0.21) then { 0 fadeSound 1; }
-		else { 0 fadeSound 0.2; };
-		systemChat format["Sound volume changed to %1%2.", soundVolume * 100, "%"];
+		if (earplugs) then {
+			0 fadeSound 1;
+			titleText["Earplugs removed.","PLAIN"];
+			earplugs = false;
+		}
+		else {
+			0 fadeSound 0.2;
+			titleText["Earplugs inserted.","PLAIN"];
+			earplugs = true;
+		};
 		_handled = true;
 	};
 	if (_code in (actionKeys "User11")) then {
 		if(redgull > 0) then
-		{
+		{		
+			redgullStart = time;
+			titleText["You comsumed a redgull.","PLAIN"];
 			player setFatigue 0;
-			life_redgull_effect = time;
-			titleText["You can now run farther for 3 minutes","PLAIN"];
 			player enableFatigue false;
 			redgull = redgull - 1;
 			systemChat format["You now have %1 redgull(s)",redgull];
 			[] spawn
 			{
-				waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
+				_start = redgullStart;
+				waitUntil {!alive player || ((time - redgullStart) > (60))};
+				if(_start != redgullStart) exitWith{};
 				player enableFatigue true;
 			};
 		}
