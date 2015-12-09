@@ -54,12 +54,9 @@ handler = {
 	_handled = false;
 	_code = _this select 1;
 	switch (_code) do {
-	case 35: {
-		[] call fnc_holsterWeapon; 
+		case 35: {
+			[] call fnc_holsterWeapon; 
 		};
-	};
-	case 20: {
-		[] execVM "Scripts\tempestBase.sqf";
 	};
 	if (_code in (actionKeys "User10")) then {
 		if (earplugs) then {
