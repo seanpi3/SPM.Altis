@@ -82,9 +82,7 @@ handler = {
 			systemChat format["You now have %1 redgull(s)",redgull];
 			[] spawn
 			{
-				_start = redgullStart;
-				waitUntil {!alive player || ((time - redgullStart) > (60))};
-				if(_start != redgullStart) exitWith{};
+				waitUntil {!alive player || (time - redgullStart) > (60)};
 				player enableFatigue true;
 			};
 		}

@@ -1,0 +1,2 @@
+castleMissionInProgress = true;
+methMissionInProgress = true;

@@ -17,7 +17,8 @@ if (isDedicated) then {
 
 	//inidb
 	call compile preProcessFile "\inidbi\init.sqf";
-
+	
+	[] execVM "debug.sqf";
 }
 else{
 	call compile preprocessFileLineNumbers "ShoterAnimation\init.sqf";
