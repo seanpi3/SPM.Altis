@@ -23,6 +23,9 @@ if (isDedicated) then {
 else{
 	call compile preprocessFileLineNumbers "ShoterAnimation\init.sqf";
 	[] execVM "functions.sqf";
-	//player execVM "scripts\simpleEP.sqf";
+	[["mip"],"fnc_informServer",false,false] call bis_fnc_MP;
 	[] execVM "initPlayer.sqf";
+	if(playerSide == "resistance") then {
+		[] execVM 'Scripts\group_manager.sqf';
+	};
 };
