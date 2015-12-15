@@ -171,8 +171,7 @@ _arsenalObject = ["Open",false] spawn BIS_fnc_arsenal;
 ], true] call BIS_fnc_addVirtualItemCargo;
 
 [_arsenalObject, [
-					
-					
+				"B_Kitbag_mcamo"	
 ], true] call BIS_fnc_addVirtualBackpackCargo;
 
 
