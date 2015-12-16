@@ -25,7 +25,7 @@ else{
 	[] execVM "functions.sqf";
 	[["mip"],"fnc_informServer",false,false] call bis_fnc_MP;
 	[] execVM "initPlayer.sqf";
-	if(playerSide == "resistance") then {
+	if(playerSide == resistance) then {
 		[] execVM 'Scripts\group_manager.sqf';
 	};
 };

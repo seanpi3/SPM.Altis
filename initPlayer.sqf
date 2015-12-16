@@ -35,7 +35,7 @@ switch (playerSide) do {
 		player setDir direction respawn_east;
 	};
 	
-	case "resistance":
+	case resistance:
 	{
 		//Indipendent not implemented yet
 	};

@@ -10,14 +10,18 @@ if (group player != _squad) exitWith {};
 
 	
 fnc_deploy = {
-	playerReady = player addAction ["Ready",{ready=true; player removeAction playerReady;}];
+	playerReady = player addAction ["Ready",{
+			ready=true;
+			player removeAction playerReady;
+			if(leader player == player) then {player removeAction squadReadyAction};
+		}];
 	if(leader player == player) then {
 		squadReadyAction = player addAction ["Squad Ready", {
 			ready = true;
 			squadReady = true;
 			player removeAction squadReadyAction;
 			player removeAction playerReady;
-			}];
+		}];
 	};
 	[true] call fnc_freezePlayer;
 	hint "Waiting for all players to be ready.";
