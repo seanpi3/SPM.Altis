@@ -41,9 +41,9 @@ switch(_variable) do {
 	
 	};
 	
-	case "mip":{
+	case "jip":{
 		_leader = leader _player;
-		[[[],{publicVariable opforMission;publicVariable blueforMission}],"call",_leader,false] call bis_fnc_MP;
+		[[[],{publicVariable opforMission;publicVariable blueforMission}],"bis_fnc_Spawn",_leader,false] call bis_fnc_MP;
 	};
 	
 };
