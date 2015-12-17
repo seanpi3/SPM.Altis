@@ -31,13 +31,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos castleLocation; player setDir direction castleLocation; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "castle";
+				mission = "castle";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos castleLocation; player setDir direction castleLocation; removeAllActions opforMap;[] call fnc_deploy },nil,1.5,true,true,"deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "castle";
+					mission = "castle";
 				};
 			};		
 		};
@@ -46,14 +46,14 @@ switch (_mission) do {
 				blueforMap addAction ["Deploy East", {player setPos getPos IP1Location; player setDir direction IP1Location; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				blueforMap addAction ["Deploy West", {player setPos getPos IP3Location; player setDir direction IP3Location;removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "castle";
+				mission = "castle";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy East", {player setPos getPos IP1Location; player setDir direction IP1Location; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"deploy"];
 					opforMap addAction ["Deploy West", {player setPos getPos IP3Location; player setDir direction IP3Location; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"deploy"];					
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "castle";
+					mission = "castle";
 				};
 			};
 		};
@@ -62,13 +62,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos fedWestLoc; player setDir direction fedWestLoc; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "fedWest";
+				mission = "fedWest";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos fedWestLoc; player setDir direction fedWestLoc; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "fedWest";
+					mission = "fedWest";
 				};
 			};
 		};
@@ -76,13 +76,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos fedEastLoc; player setDir direction fedEastLoc; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "fedEast";
+				mission = "fedEast";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos fedEastLoc; player setDir direction fedEastLoc; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "fedEast";
+					mission = "fedEast";
 				};
 			};
 		};
@@ -90,13 +90,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos islandNorthSpawn; player setDir direction islandNorthSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "islandNorth";
+				mission = "islandNorth";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos islandNorthSpawn; player setDir direction islandNorthSpawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "islandNorth";
+					mission = "islandNorth";
 				};
 			};
 		};
@@ -104,13 +104,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos islandSouthSpawn; player setDir direction islandSouthSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "islandSouth";
+				mission = "islandSouth";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos islandSouthSpawn; player setDir direction islandSouthSpawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "islandSouth";
+					mission = "islandSouth";
 				};
 			};	
 		};
@@ -118,13 +118,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos swampTeam1Spawn; player setDir direction swampTeam1Spawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "swampTeam1";
+				mission = "swampTeam1";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos swampTeam1Spawn; player setDir direction swampTeam1Spawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "swampTeam1";
+					mission = "swampTeam1";
 				};
 			};
 		};
@@ -132,13 +132,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos swampTeam2Spawn; player setDir direction swampTeam2Spawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "swampTeam2";
+				mission = "swampTeam2";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos swampTeam2Spawn; player setDir direction swampTeam2Spawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "swampTeam2";
+					mission = "swampTeam2";
 				};
 			};
 		};
@@ -146,13 +146,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos galatiNorthSpawn; player setDir direction galatiNorthSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "galatiNorth";
+				mission = "galatiNorth";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos galatiNorthSpawn; player setDir direction galatiNorthSpawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "galatiNorth";
+					mission = "galatiNorth";
 				};
 			};
 		};
@@ -160,13 +160,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos galatiSouthSpawn; player setDir direction galatiSouthSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "galatiSouth";
+				mission = "galatiSouth";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos galatiSouthSpawn; player setDir direction galatiSouthSpawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "galatiSouth";
+					mission = "galatiSouth";
 				};
 			};
 		};
@@ -174,13 +174,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos koreNorthSpawn; player setDir direction koreNorthSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "koreNorth";
+				mission = "koreNorth";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos koreNorthSpawn; player setDir direction koreNorthSpawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "koreNorth";
+					mission = "koreNorth";
 				};
 			};
 		};
@@ -188,13 +188,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos koreSouthSpawn; player setDir direction koreSouthSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "koreSouth";
+				mission = "koreSouth";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos koreSouthSpawn; player setDir direction koreSouthSpawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "koreSouth";
+					mission = "koreSouth";
 				};
 			};
 		};
@@ -202,13 +202,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos ruinsNorthSpawn; player setDir direction ruinsNorthSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "ruinsNorth";
+				mission = "ruinsNorth";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos ruinsNorthSpawn; player setDir direction ruinsNorthSpawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "ruinsNorth";
+					mission = "ruinsNorth";
 				};
 			};
 		};
@@ -216,13 +216,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos ruinsSouthSpawn; player setDir direction ruinsSouthSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "ruinsSouth";
+				mission = "ruinsSouth";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos ruinsSouthSpawn; player setDir direction ruinsSouthSpawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "ruinsSouth";
+					mission = "ruinsSouth";
 				};
 			};
 		};
@@ -230,13 +230,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos methDefenceSpawn; player setDir direction methDefenceSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "methDefence";
+				mission = "methDefence";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos methDefenceSpawn; player setDir direction methDefenceSpawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "methDefence";
+					mission = "methDefence";
 				};
 			};
 		};
@@ -244,13 +244,13 @@ switch (_mission) do {
 			if(side _squad == WEST) then {
 				blueforMap addAction ["Deploy", {player setPos getPos methOffenceSpawn; player setDir direction methOffenceSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 				["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-				blueforMission = "methOffence";
+				mission = "methOffence";
 			}
 			else{
 				if(side _squad == EAST) then {
 					opforMap addAction ["Deploy", {player setPos getPos methOffenceSpawn; player setDir direction methOffenceSpawn; removeAllActions opforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
-					opforMission = "methOffence";
+					mission = "methOffence";
 				};
 			};
 		};

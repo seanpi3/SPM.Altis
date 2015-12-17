@@ -24,6 +24,7 @@ else{
 	call compile preprocessFileLineNumbers "ShoterAnimation\init.sqf";
 	[] execVM "functions.sqf";
 	if(didJIP) then {[["jip"],"fnc_informServer",false,false] call bis_fnc_MP};
+	[] execVM "Squads\initSquads.sqf";
 	[] execVM "initPlayer.sqf";
 	if(playerSide == resistance) then {
 		[] execVM 'Scripts\group_manager.sqf';

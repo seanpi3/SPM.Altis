@@ -43,7 +43,7 @@ switch(_variable) do {
 	
 	case "jip":{
 		_leader = leader _player;
-		[[[],{publicVariable opforMission;publicVariable blueforMission}],"bis_fnc_Spawn",_leader,false] call bis_fnc_MP;
+		[[[],{[[[mission],{mission = _this select 0}],"bis_fnc_Spawn",group player,false] call bis_fnc_MP}],"bis_fnc_Spawn",_leader,false] call bis_fnc_MP;
 	};
 	
 };
