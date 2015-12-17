@@ -37,7 +37,8 @@ switch (playerSide) do {
 	
 	case resistance:
 	{
-		//Indipendent not implemented yet
+		player setPos getPos stadiumCommunitySpawn;
+		player setDir direction stadiumCommunitySpawn;
 	};
 
 	default {hint "You shouldn't be here..."};

@@ -6,7 +6,7 @@ _unit = _this select 0;
 
 removeAllWeapons _unit;
 removeAllAssignedItems _unit;
-removeAllContainers _unit;
+//removeAllContainers _unit;
 //removeUniform _unit;
 removeVest _unit;
 removeBackpack _unit;
