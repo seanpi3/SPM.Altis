@@ -174,5 +174,29 @@ _arsenalObject = ["Open",false] spawn BIS_fnc_arsenal;
 				"B_Kitbag_mcamo"	
 ], true] call BIS_fnc_addVirtualBackpackCargo;
 
+[_arsenalObject, [
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Green",
+				"30Rnd_556x45_Stanag_Tracer_Yellow",
+				"20Rnd_556x45_UW_mag",
+				"30Rnd_65x39_caseless_mag",
+				"30Rnd_65x39_caseless_green",
+				"30Rnd_65x39_caseless_mag_Tracer",
+				"30Rnd_65x39_caseless_green_mag_Tracer",
+				"20Rnd_762x51_Mag",
+				"100Rnd_65x39_caseless_mag",
+				"100Rnd_65x39_caseless_mag_Tracer",
+				"30Rnd_9x21_Mag",
+				"16Rnd_9x21_Mag",
+				"SmokeShell",
+				"SmokeShellRed",
+				"SmokeShellGreen",
+				"SmokeShellYellow",
+				"SmokeShellPurple",
+				"SmokeShellBlue",
+				"SmokeShellOrange"
+], true] call BIS_fnc_addVirtualMagazineCargo;
+
 
 				
