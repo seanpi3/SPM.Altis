@@ -99,7 +99,7 @@ switch (_mission) do {
 			};
 		};
 		case "islandNorth":{
-			switch(side _squad){
+			switch(side _squad) do {
 				case west:{
 					blueforMap addAction ["Deploy", {player setPos getPos islandNorthSpawn; player setDir direction islandNorthSpawn; removeAllActions blueforMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
 					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
