@@ -40,7 +40,9 @@ switch (_mission) do {
 					mission = "castle";
 				};
 				case resistance:{
-					
+					squadMap addAction ["Deploy", {player setPos getPos castleLocation; player setDir direction castleLocation; removeAllActions squadMap;[] call fnc_deploy },nil,1.5,true,true,"deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "castle";
 				};
 			};
 		};
@@ -59,7 +61,10 @@ switch (_mission) do {
 					mission = "castle";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy East", {player setPos getPos IP1Location; player setDir direction IP1Location; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"deploy"];
+					squadMap addAction ["Deploy West", {player setPos getPos IP3Location; player setDir direction IP3Location; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"deploy"];					
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "castle";
 				};
 			};
 		};
@@ -77,7 +82,9 @@ switch (_mission) do {
 					mission = "fedWest";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos fedWestLoc; player setDir direction fedWestLoc; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "fedWest";
 				};
 			};
 		};
@@ -94,7 +101,9 @@ switch (_mission) do {
 					mission = "fedEast";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos fedEastLoc; player setDir direction fedEastLoc; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "fedEast";
 				};
 			};
 		};
@@ -111,7 +120,9 @@ switch (_mission) do {
 					mission = "islandNorth";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos islandNorthSpawn; player setDir direction islandNorthSpawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "islandNorth";
 				};
 			};
 		};
@@ -128,7 +139,9 @@ switch (_mission) do {
 					mission = "islandSouth";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos islandSouthSpawn; player setDir direction islandSouthSpawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "islandSouth";
 				};
 			};
 		};
@@ -145,7 +158,9 @@ switch (_mission) do {
 					mission = "swampTeam1";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos swampTeam1Spawn; player setDir direction swampTeam1Spawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "swampTeam1";
 				};
 			};
 		};
@@ -162,7 +177,9 @@ switch (_mission) do {
 					mission = "swampTeam2";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos swampTeam2Spawn; player setDir direction swampTeam2Spawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "swampTeam2";
 				};
 			};
 		};
@@ -179,7 +196,9 @@ switch (_mission) do {
 					mission = "galatiNorth";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos galatiNorthSpawn; player setDir direction galatiNorthSpawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "galatiNorth";
 				};
 			};
 		};
@@ -196,7 +215,9 @@ switch (_mission) do {
 					mission = "galatiSouth";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos galatiSouthSpawn; player setDir direction galatiSouthSpawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "galatiSouth";
 				};
 			};
 		};
@@ -213,7 +234,9 @@ switch (_mission) do {
 					mission = "koreNorth";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos koreNorthSpawn; player setDir direction koreNorthSpawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "koreNorth";
 				};
 			};
 		};
@@ -230,7 +253,9 @@ switch (_mission) do {
 					mission = "koreSouth";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos koreSouthSpawn; player setDir direction koreSouthSpawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "koreSouth";
 				};
 			};
 		};
@@ -247,7 +272,9 @@ switch (_mission) do {
 					mission = "ruinsNorth";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos ruinsNorthSpawn; player setDir direction ruinsNorthSpawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "ruinsNorth";
 				};
 			};
 		};
@@ -264,7 +291,9 @@ switch (_mission) do {
 					mission = "ruinsSouth";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos ruinsSouthSpawn; player setDir direction ruinsSouthSpawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "ruinsSouth";
 				};
 			};
 		};
@@ -281,7 +310,9 @@ switch (_mission) do {
 					mission = "methDefence";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos methDefenceSpawn; player setDir direction methDefenceSpawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "methDefence";
 				};
 			};
 		};
@@ -298,7 +329,9 @@ switch (_mission) do {
 					mission = "methOffence";
 				};
 				case resistance:{
-				
+					squadMap addAction ["Deploy", {player setPos getPos methOffenceSpawn; player setDir direction methOffenceSpawn; removeAllActions squadMap;[] call fnc_deploy},nil,1.5,true,true,"","deploy"];
+					["MissionAssigned", ["You have been assigned a mission."]] call bis_fnc_showNotification;
+					mission = "methOffence";
 				};
 			};
 		};
