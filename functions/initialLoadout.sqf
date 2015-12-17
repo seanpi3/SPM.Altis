@@ -16,7 +16,7 @@ removeHeadgear _unit;
 //_unit  addUniform "U_O_GhillieSuit";
 //_unit  addBackPack "B_Kitbag_mcamo";
  
-//_unit addWeapon 'Binocular';
+_unit addWeapon 'Binocular';
 
 //_unit addItem "NVGoogles";
 //_unit addItem "ItemWatch";
