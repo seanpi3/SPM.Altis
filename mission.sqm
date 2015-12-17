@@ -3504,7 +3504,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=8;
+		items=11;
 		class Item0
 		{
 			position[]={11208.059,182.41,8713.708};
@@ -3552,6 +3552,24 @@ class Mission
 			position[]={14258.169,4.41923,13024.38};
 			name="methMarker";
 			type="mil_flag";
+		};
+		class Item8
+		{
+			position[]={8363.3311,74.825165,25218.617};
+			name="respawn_west";
+			type="Empty";
+		};
+		class Item9
+		{
+			position[]={8450.9473,85.37529,25214.748};
+			name="respawn_east";
+			type="Empty";
+		};
+		class Item10
+		{
+			position[]={8574.8076,88.850037,25222.49};
+			name="respawn_guerrila";
+			type="Empty";
 		};
 	};
 	class Sensors
