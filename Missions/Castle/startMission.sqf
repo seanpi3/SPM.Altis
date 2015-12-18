@@ -143,13 +143,12 @@ while{castleMissionInProgress} do {
 	sleep 1;
 };
 
-[[castleOffence, castleDefence],"fnc_returnToBase"] call BIS_fnc_MP;
-opforMission = "";
-blueforMission = "";
+[[],"fnc_missionCompleted",castleOffence,false] call BIS_fnc_MP;
+[[],"fnc_missionCompleted",castleDefence,false] call BIS_fnc_MP;
+
 castleOffence = grpNull;
 castleDefence = grpNull;
 castleSquadCount = 0;
-publicVariable "opforMission";
-publicVariable "blueforMission";
+
 
 

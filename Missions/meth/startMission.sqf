@@ -140,13 +140,12 @@ if(isNull methOffence || isNull methDefence) then {
 	sleep 1;
 };
 
-[[methOffence, methDefence],"fnc_returnToBase"] call BIS_fnc_MP;
-opforMission = "";
-blueforMission = "";
+[[],"fnc_missionCompleted",methOffence,false] call BIS_fnc_MP;
+[[],"fnc_missionCompleted",methDefence,false] call BIS_fnc_MP;
+
 methOffence = grpNull;
 methDefence = grpNull;
 methSquadCount = 0;
-publicVariable "opforMission";
-publicVariable "blueforMission";
+
 
 

@@ -118,13 +118,10 @@ while{fedMissionInProgress} do {
 	};
 };
 
-[[fedEast, fedWest],"fnc_returnToBase"] call BIS_fnc_MP;
-opforMission = "";
-blueforMission = "";
+[[],"fnc_missionCompleted",fedEast,false] call BIS_fnc_MP;
+[[],"fnc_missionCompleted",fedWest,false] call BIS_fnc_MP;
 fedEast = grpNull;
 fedWest = grpNull;
 fedSquadCount = 0;
-publicVariable "opforMission";
-publicVariable "blueforMission";
 
 

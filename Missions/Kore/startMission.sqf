@@ -118,13 +118,11 @@ while{koreMissionInProgress} do {
 	};
 };
 
-[[koreNorth, koreSouth],"fnc_returnToBase"] call BIS_fnc_MP;
-opforMission = "";
-blueforMission = "";
+[[],"fnc_missionCompleted",koreNorth,false] call BIS_fnc_MP;
+[[],"fnc_missionCompleted",koreSouth,false] call BIS_fnc_MP;
+
 koreNorth = grpNull;
 koreSouth = grpNull;
 koreSquadCount = 0;
-publicVariable "opforMission";
-publicVariable "blueforMission";
 
 

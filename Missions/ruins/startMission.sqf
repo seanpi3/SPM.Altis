@@ -118,13 +118,14 @@ while{ruinsMissionInProgress} do {
 	};
 };
 
-[[ruinsNorth, ruinsSouth],"fnc_returnToBase"] call BIS_fnc_MP;
-opforMission = "";
-blueforMission = "";
+
+[[],"fnc_missionCompleted",ruinsNorth,false] call BIS_fnc_MP;
+[[],"fnc_missionCompleted",ruinsSouth,false] call BIS_fnc_MP;
+
+
 ruinsNorth = grpNull;
 ruinsSouth = grpNull;
 ruinsSquadCount = 0;
-publicVariable "opforMission";
-publicVariable "blueforMission";
+
 
 

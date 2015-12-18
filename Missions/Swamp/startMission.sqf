@@ -118,13 +118,12 @@ while{swampMissionInProgress} do {
 	};
 };
 
-[[swampTeam1, swampTeam2],"fnc_returnToBase"] call BIS_fnc_MP;
-opforMission = "";
-blueforMission = "";
+
+[[],"fnc_missionCompleted",swampTeam1,false] call BIS_fnc_MP;
+[[],"fnc_missionCompleted",swampTeam2,false] call BIS_fnc_MP;
+
 swampTeam1 = grpNull;
 swampTeam2 = grpNull;
 swampSquadCount = 0;
-publicVariable "opforMission";
-publicVariable "blueforMission";
 
 

@@ -24,6 +24,7 @@ fnc_addDeath = compile preprocessFileLineNumbers "functions\addDeath.sqf";
 
 fnc_getIntel = compile preprocessFileLineNumbers "functions\getIntel.sqf";
 fnc_missionRecieved = compile preprocessFileLineNumbers "functions\missionRecieved.sqf";
+fnc_missionCompleted = compile preprocessFileLineNumbers "functions\missionCompleted.sqf";
 fnc_setupCastleMarkers = compile preprocessFileLineNumbers "functions\setupCastleMarkers.sqf";
 fnc_freezePlayer = compile preprocessFileLineNumbers "functions\freezePlayer.sqf";
 fnc_queryClient = compile preprocessFileLineNumbers "functions\queryClient.sqf";

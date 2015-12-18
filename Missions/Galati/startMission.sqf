@@ -118,13 +118,11 @@ while{galatiMissionInProgress} do {
 	};
 };
 
-[[galatiNorth, galatiSouth],"fnc_returnToBase"] call BIS_fnc_MP;
-opforMission = "";
-blueforMission = "";
+[[],"fnc_missionCompleted",galatiNorth,false] call BIS_fnc_MP;
+[[],"fnc_missionCompleted",galatiSouth,false] call BIS_fnc_MP;
+
 galatiNorth = grpNull;
 galatiSouth = grpNull;
 galatiSquadCount = 0;
-publicVariable "opforMission";
-publicVariable "blueforMission";
 
 

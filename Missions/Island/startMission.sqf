@@ -118,13 +118,10 @@ while{islandMissionInProgress} do {
 	};
 };
 
-[[islandNorth, islandSouth],"fnc_returnToBase"] call BIS_fnc_MP;
-opforMission = "";
-blueforMission = "";
+[[],"fnc_missionCompleted",islandNorth,false] call BIS_fnc_MP;
+[[],"fnc_missionCompleted",islandSouth,false] call BIS_fnc_MP;
+
 islandNorth = grpNull;
 islandSouth = grpNull;
 islandSquadCount = 0;
-publicVariable "opforMission";
-publicVariable "blueforMission";
-
 
