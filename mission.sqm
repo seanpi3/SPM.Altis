@@ -2365,25 +2365,6 @@ class Mission
 		};
 		class Item69
 		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5474.3921,27.299999,14997.426};
-					azimut=136.106;
-					id=87;
-					side="WEST";
-					vehicle="B_CTRG_soldier_AR_A_F";
-					leader=1;
-					skill=0.60000002;
-					init="_npc = [this] execVM ""NPCs\intelNPC.sqf"";";
-				};
-			};
-		};
-		class Item70
-		{
 			side="CIV";
 			class Vehicles
 			{
@@ -2392,7 +2373,7 @@ class Mission
 				{
 					position[]={5476.4087,27.299999,15000.605};
 					azimut=-227.79594;
-					id=88;
+					id=87;
 					side="CIV";
 					vehicle="C_scientist_F";
 					leader=1;
@@ -2401,19 +2382,38 @@ class Mission
 				};
 			};
 		};
-		class Item71
+		class Item70
 		{
-			side="WEST";
+			side="GUER";
 			class Vehicles
 			{
 				items=1;
 				class Item0
 				{
-					position[]={5475.5303,27.299999,14999.394};
-					azimut=-233.34561;
+					position[]={5474.457,27.299999,14997.427};
+					azimut=131.05086;
+					id=88;
+					side="GUER";
+					vehicle="I_Story_Colonel_F";
+					leader=1;
+					skill=0.60000002;
+					init="_npc = [this] execVM ""NPCs\intelNPC.sqf"";";
+				};
+			};
+		};
+		class Item71
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5475.0547,27.299999,14999.446};
+					azimut=131.05099;
 					id=89;
-					side="WEST";
-					vehicle="B_RangeMaster_F";
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
 					leader=1;
 					skill=0.60000002;
 					init="_npc = [this] execVM ""NPCs\loadout.sqf"";";
