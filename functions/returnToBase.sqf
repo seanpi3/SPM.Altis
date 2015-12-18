@@ -11,7 +11,7 @@ return = player addAction [
 	"Return to base",
 	{
 		_id = _this select 2;
-		switch(side squad) do {
+		switch(side player) do {
 			case west:{player setPos getPos respawn_west};
 			case east:{player setPos getPos respawn_east};
 			case resistance:{player setPos getPos stadiumCommunitySpawn};
