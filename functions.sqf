@@ -12,8 +12,8 @@ MAC_fnc_switchMove = {
 };
 
 fnc_initLoadout = compile preprocessFileLineNumbers "functions\initialLoadout.sqf";
-fnc_viewStats = compile preprocessFileLineNumbers "functions\viewStats.sqf";
 fnc_initPlayer = compile preprocessFileLineNumbers "initPlayer.sqf";
+fnc_viewStats = compile preprocessFileLineNumbers "functions\viewStats.sqf";
 
 fnc_paintball = compile preprocessFileLineNumbers "scripts\paintball.sqf";
 fnc_animation = compile preprocessFileLineNumbers "ShoterAnimation\ShoterAnimation.sqf";
@@ -52,4 +52,3 @@ fnc_methFlag = compile preprocessFileLineNumbers "missions\Meth\methFlag.sqf";
 
 fnc_returnToBase = compile preprocessFileLineNumbers "functions\returnToBase.sqf";
 fnc_holsterWeapon = compile preprocessFileLineNumbers "functions\holsterWeapon.sqf";
-fnc_playerActions = compile preprocessFileLineNumbers "functions\playerActions.sqf";
