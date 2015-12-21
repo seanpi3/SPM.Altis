@@ -7,7 +7,6 @@ islandFlagAction = islandFlag addAction ["Claim Victory",
 		{	
 				[[player, "AinvPknlMstpSnonWnonDnon_medic_1"], "playMove", true, false, false] spawn BIS_fnc_MP;
 				sleep .5;
-				_count = _count + .1;
 				if (!alive player) exitWith {};
 				if(player distance _target > 5) exitWith {};
 				if(!islandMissionInProgress) exitWith{};
