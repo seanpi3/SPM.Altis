@@ -3,7 +3,8 @@ castleFlagAction = castleFlag addAction ["Claim Victory",
 	{
 		castleFlag setFlagOwner player;
 		_startTime = time;
-		while {_startTime - time < 30} do
+		_target = cursorTarget;
+		while {time - _startTime < 30} do
 		{	
 				[[player, "AinvPknlMstpSnonWnonDnon_medic_1"], "playMove", true, false, false] spawn BIS_fnc_MP;
 				sleep .5;
